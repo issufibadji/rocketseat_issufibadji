@@ -1,0 +1,186 @@
+<!--  
+Nesse curso iremos aprender o que é HTML,
+     seus conceitos essenciais, tags, atributos, aninhamentos, 
+     hierarquias de tags, elementos de diretórios.
+-->
+<!--  
+    1. Comentários
+    -->
+<!-- comentários -->
+<!-- 
+  Instalação de extensão:   
+-->
+<!--  
+      
+    2. HT=> Hypertexto, M=>MarkP, L=> Linguagem  
+    Anotação: 
+Agora estaremos aprendendo o que é o HTML.
+  
+     -->
+<!-- 
+    3. Animação com Tags
+        -Abertura da Tag
+        -Fechamento das Tag
+        -Conteudo da Tag
+        -Elemento da Tag
+    Anotaçao    
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+        3.1.Elementos
+    -->
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Elementos-->
+    <h1>Issufi Badji</h1>
+    <h2></h2>
+    <!-- Elementos vavzio(não tem fichamento)-->
+
+    <img>
+    <input>
+    <!-- 
+            4. Atributos 
+        -Fonrmações extras
+        -Configuraçoes
+    -->
+    <img src="w3school.png" alt="Imagem">
+    <br>
+    <input type="text">
+    <!-- 
+       5. Atributos Booleanos
+            -Não precisam de conteúdo
+    -->
+    <input type="button" disabled>
+    <!--
+        6.Aspas 
+            -Omissão
+            -Simples
+            -dupla
+            obs: Usa aspas duplas
+    -->
+    <hr>
+    <a href="https://www.google.com.br/" title="Ins't ">Link</a>
+    <hr>
+    <p title="I'm a tooltip">This is a paragraph.</p>
+    <!--
+        7.Atributo Globais mais utilizados
+        -Classe->serve para usar na js e css
+        -Contenteditable=>conteudo pode ser editado
+        -data-*
+        -hidden
+        -Style
+        -Tabindex
+        -title
+    -->
+    <div class="carrinho">
+        <!--usa-se quando tem mais de que um nome serve para usar na js e css-->
+        Conteudo-class
+    </div>
+
+    <div class="carrinho" contenteditable="true">
+        <!--O conteudo pode ser editado-->
+        Conteudo-contenteditable
+    </div>
+    <div class="carrinho" data-id="">
+        <!--serve para usar na js e css-->
+        Conteudo-data-id
+    </div>
+    <div class="carrinho" hidden>
+        <!--Esconde o conteudo-->
+        Conteudo-Hidden
+    </div>
+    <div class="carrinho" id="car1">
+        <!--id serve só para um nome-->
+        Conteudo-id
+    </div>
+    <p style="color:red;">This is a paragraph.</p>
+    <hr>
+    <div tabindex="1">tabindex1</div>
+    <div tabindex="2">tabindex2 </div>
+    <div tabindex="3">tabindex3</div>
+    <!--Titly-->
+    <div title="Meu Website">Titulo</div>
+    <hr>
+    <!--
+        8.Alinhamentos de Tags
+            -Hieraquia
+            -Fluxos 
+            -Posicionamento dos ele/toss
+    -->
+    <p>Vou <em>escrever  </em> um parágrafo</p>
+    <pre>
+        <!--
+         Defines pre-formatted text
+        -->
+        My Bonnie lies over the ocean.
+
+        My  <b>Bonnie</b>   lies over the sea.
+      
+        My <strong>Bonnie </strong>  lies over the ocean.
+      
+        Oh, bring back my <em> Bonnie </em> to me.
+      </pre>
+    <hr>
+    <!--Hieraquia-->
+    <div>
+        <p>
+            <em>Hieraquia</em>
+        </p>
+    </div>
+    <!--Fluxo-->
+    <p>Ordem de Tags-1</p>
+    <p>Ordem de Tags-2</p>
+    <!--Posicionamento-->
+    <p>-Posicionamento dos <em> Elementos</em> </p>
+
+    <hr>
+    <!--9. Praticando-->
+    <!--
+        Vamos Praticar
+        Escrever 2 paragrafos, dando ênfase e importancia para algumas palavras, e adicionar um link saiba mais.
+        -Use a tag em para ênfase 
+        -Use a tag strong para imporntancia
+        -O link pode levar para o Google
+    -->
+    <div>
+        <!--Digite palavra "Lorem" e da enter-->
+        <!--Alt+Z=> da quabra no textos-->
+        <p><em> Lorem ipsum dolor</em> sit amet consectetur adipisicing elit. Consequatur quisquam perspiciatis voluptatibus accusantium. <br> Labore, incidunt. Corporis saepe placeat enim voluptatem, unde deleniti natus fugit dolore sint harum dolorum libero
+            similique.
+        </p>
+
+        <p>Lorem <em>ipsum</em> dolor sit amet consectetur adipisicing elit. Consequatur quisquam perspiciatis <b>voluptatibus</b> accusantium. <br> Labore, incidunt. <strong>Corporis saepe placeat enim voluptatem, 
+                unde deleniti natus fugit dolore sint harum dolorum libero similique.</strong>
+        </p>
+        <!-- Link de Saiba Mais-->
+        <a href="https://google.com">Saiba Mais</a>
+    </div>
+    <hr>
+    <!--
+            Conteusdo de Texto e 
+            Caracter reservados:("",&,<, et)
+     
+    -->
+    <div>
+        <p>
+            <!--&nbsp;=> espaços-->
+            <!--
+                Quando pretende escrever carater especial tem ser acompanhado com "&"
+                -&lt: >
+            -->
+            &nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. <i>Mollitiadicta quasi sit commodi necessitatibus tempore esse, assumenda dolores praesentium omnis eum optio excepturi corporis quisquam rerum ipsa accusamus laboriosam ullam.</i>
+            <br><br> &nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dicta quasi sit commodi necessitatibus tempore esse, assumenda dolores praesentium omnis eum optio excepturi corporis quisquam rerum ipsa accusamus laboriosam
+            ullam. <br> <br> caracter especial : &lt;&gt;&amp; &reg; &quot;<a href="https://www.w3schools.com/html/html_entities.asp">Saiba Mais</a>
+        </p>
+    </div>
+</body>
+
+</html>

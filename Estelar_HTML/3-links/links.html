@@ -1,0 +1,175 @@
+<!--
+  Hyperlinks -Elementos Âncora:<a>
+    +Anatomia
+    +Atributos:
+        -Globais
+        -href
+         -Para onde iremos quando clicarmos no link ?
+              -url completo
+              -email
+              -fragmentos
+              -telefone
+              -outros
+          -Dowload
+          -Target
+              -_self(padrão)
+              -_blank
+-->
+<!--
+  São os famosos hyperlinks, e a tag usada para se criar um é a <a href=" ></a>, 
+  responsável por ligar várias páginas. Em sua anatomia ele recebe atributos globais (title, id ,class,...) 
+  e o mais importante href, a referência, podendo ser url completa, 
+  fragmento, email, telefone e mais diversos outros. 
+  há também o atributo de download, que é download="", usado junto do href="",
+  por exemplo, se você colocar o link de uma imagem no href="" com o atributo de download,
+  a imagem será baixada ao invés de irmos até a página e se colocarmos um valor no 
+  atributo de download, ele irá dizer como você vai salvar o arquivo.
+  Por fim temos o atributo target="", que irá dizer qual o alvo do nosso disparo, ou seja, 
+  se não tivermos o target, quando clicarmos no link, ele vai pegar o mesmo alvo, 
+  a mesma página e apenas vai trocar o conteúdo, mas se usarmos o atributo, 
+  por exemplo target="_blank", ele vai abrir uma página com o conteúdo.
+-->
+
+<!--
+  Utilização de tag Âncoro
+    -Fragmento com html
+    Neste exemplo temos os fragmentos, com o navegador aberto, se clicarmos em qualquer um deles, 
+    será adicionado uma # e o nome do respectivo fragmento, mas como faremos a ligação entre o fragmento 
+    e a sua respectiva parte? adicionamos o atributo global id="" e colocamos o nome do fragmento dentro dele, 
+    o que faz com que sejamos levados até onde está o id na página.
+-->
+<p>Saiba mais</p>
+<ul>
+    <li>
+        <a href="#about" title="ir para Sobre mim">
+            <h1>Sobre mim</h1>
+        </a>
+    </li>
+    <li>
+        <a href="#history" title="ir para História">
+            <h1>História</h1>
+        </a>
+    </li>
+    <li>
+        <a href="#works" title="ir para Trabalhos">
+            <h1>Trabalhos</h1>
+        </a>
+    </li>
+</ul>
+
+<h1 id="about">Sobre mim</h1>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eius harum quos similique. Debitis, itaque sit veniam quam recusandae eligendi aspernatur neque deleniti adipisci provident excepturi voluptate, amet corporis laborum. Lorem ipsum dolor
+sit, amet consectetur adipisicing elit. Et necessitatibus molestias delectus est consequuntur culpa voluptatum alias obcaecati, harum id tempore consectetur earum sequi inventore. Laboriosam corporis tenetur vitae ratione. Lorem ipsum dolor, sit amet
+consectetur adipisicing elit. Architecto soluta consequuntur eligendi dignissimos. Ab quas voluptatum minima eum nostrum, porro obcaecati mollitia nihil voluptates rerum beatae similique quibusdam delectus possimus! Lorem ipsum dolor sit, amet consectetur
+adipisicing elit. Fugiat eum deleniti dolores blanditiis eveniet. Quisquam aperiam dolorem quibusdam quas eveniet, illum et. Ab cumque magni hic tempore reprehenderit temporibus facere!
+
+<h2 id="history">História</h2>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore velit ab nisi sit quam quis ea provident. Sequi numquam modi, voluptatem velit nulla harum vel quasi nesciunt doloribus est aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing
+elit. A, earum incidunt. Explicabo debitis in quae voluptatem rerum, laborum iste illum dolore vel quidem exercitationem nesciunt eligendi deserunt, quos velit
+<possimus class="lore"></possimus>
+
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nesciunt veritatis pariatur eaque quaerat facere odio illum provident, dolore velit tempora modi blanditiis harum ab quis alias atque? Provident, dolor. Lorem ipsum dolor sit amet consectetur
+adipisicing elit. Libero facere quos veniam quibusdam, adipisci soluta quae maiores corporis, natus mollitia illo dolore cumque neque tempore animi. Reprehenderit molestias porro mollitia? orem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+nostrum aspernatur rerum aliquid quae aliquam et harum, vero quibusdam porro. Iusto architecto soluta reprehenderit dolores enim. Earum provident perferendis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex inventore ea nemo
+amet accusantium aliquid dicta fugiat quia culpa odio, minima officiis quidem maxime velit corrupti! Dolorem, dicta blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in placeat architecto earum, ullam iusto nesciunt nobis
+perferendis quam, quo consequatur adipisci magni, ipsam asperiores minus odit. Doloribus, dolor expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nostrum aspernatur rerum aliquid quae aliquam et harum, vero quibusdam porro. Iusto
+architecto soluta reprehenderit dolores enim. Earum provident perferendis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex inventore ea nemo amet accusantium aliquid dicta fugiat quia culpa odio, minima officiis quidem maxime
+velit corrupti! Dolorem, dicta blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in placeat architecto earum, ullam iusto nesciunt nobis perferendis quam, quo consequatur adipisci magni, ipsam asperiores minus odit. Doloribus,
+dolor expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nostrum aspernatur rerum aliquid quae aliquam et harum, vero quibusdam porro. Iusto architecto soluta reprehenderit dolores enim. Earum provident perferendis sapiente. Lorem
+ipsum dolor sit amet consectetur adipisicing elit. Omnis ex inventore ea nemo amet accusantium aliquid dicta fugiat quia culpa odio, minima officiis quidem maxime velit corrupti! Dolorem, dicta blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing
+elit. Aspernatur in placeat architecto earum, ullam iusto nesciunt nobis perferendis quam, quo consequatur adipisci magni, ipsam asperiores minus odit. Doloribus, dolor expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nostrum
+aspernatur rerum aliquid quae aliquam et harum, vero quibusdam porro. Iusto architecto soluta reprehenderit dolores enim. Earum provident perferendis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex inventore ea nemo amet accusantium
+aliquid dicta fugiat quia culpa odio, minima officiis quidem maxime velit corrupti! Dolorem, dicta blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in placeat architecto earum, ullam iusto nesciunt nobis perferendis quam,
+quo consequatur adipisci magni, ipsam asperiores minus odit. Doloribus, dolor expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nostrum aspernatur rerum aliquid quae aliquam et harum, vero quibusdam porro. Iusto architecto soluta
+reprehenderit dolores enim. Earum provident perferendis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex inventore ea nemo amet accusantium aliquid dicta fugiat quia culpa odio, minima officiis quidem maxime velit corrupti!
+Dolorem, dicta blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in placeat architecto earum, ullam iusto nesciunt nobis perferendis quam, quo consequatur adipisci magni, ipsam asperiores minus odit. Doloribus, dolor expedita.
+orem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nostrum aspernatur rerum aliquid quae aliquam et harum, vero quibusdam porro. Iusto architecto soluta reprehenderit dolores enim. Earum provident perferendis sapiente. Lorem ipsum dolor
+sit amet consectetur adipisicing elit. Omnis ex inventore ea nemo amet accusantium aliquid dicta fugiat quia culpa odio, minima officiis quidem maxime velit corrupti! Dolorem, dicta blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Aspernatur in placeat architecto earum, ullam iusto nesciunt nobis perferendis quam, quo consequatur adipisci magni, ipsam asperiores minus odit. Doloribus, dolor expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nostrum aspernatur
+rerum aliquid quae aliquam et harum, vero quibusdam porro. Iusto architecto soluta reprehenderit dolores enim. Earum provident perferendis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex inventore ea nemo amet accusantium aliquid
+dicta fugiat quia culpa odio, minima officiis quidem maxime velit corrupti! Dolorem, dicta blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in placeat architecto earum, ullam iusto nesciunt nobis perferendis quam, quo consequatur
+adipisci magni, ipsam asperiores minus odit. Doloribus, dolor expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nostrum aspernatur rerum aliquid quae aliquam et harum, vero quibusdam porro. Iusto architecto soluta reprehenderit
+dolores enim. Earum provident perferendis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex inventore ea nemo amet accusantium aliquid dicta fugiat quia culpa odio, minima officiis quidem maxime velit corrupti! Dolorem, dicta
+blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in placeat architecto earum, ullam iusto nesciunt nobis perferendis quam, quo consequatur adipisci magni, ipsam asperiores minus odit. Doloribus, dolor expedita.Lorem ipsum
+dolor sit amet consectetur adipisicing elit. Adipisci nostrum aspernatur rerum aliquid quae aliquam et harum, vero quibusdam porro. Iusto architecto soluta reprehenderit dolores enim. Earum provident perferendis sapiente. Lorem ipsum dolor sit amet consectetur
+adipisicing elit. Omnis ex inventore ea nemo amet accusantium aliquid dicta fugiat quia culpa odio, minima officiis quidem maxime velit corrupti! Dolorem, dicta blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in placeat
+architecto earum, ullam iusto nesciunt nobis perferendis quam, quo consequatur adipisci magni, ipsam asperiores minus odit. Doloribus, dolor expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nostrum aspernatur rerum aliquid quae
+aliquam et harum, vero quibusdam porro. Iusto architecto soluta reprehenderit dolores enim. Earum provident perferendis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex inventore ea nemo amet accusantium aliquid dicta fugiat
+quia culpa odio, minima officiis quidem maxime velit corrupti! Dolorem, dicta blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in placeat architecto earum, ullam iusto nesciunt nobis perferendis quam, quo consequatur adipisci
+magni, ipsam asperiores minus odit. Doloribus, dolor expedita.
+
+<h2 id="works">Trabalhos</h2>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nostrum aspernatur rerum aliquid quae aliquam et harum, vero quibusdam porro. Iusto architecto soluta reprehenderit dolores enim. Earum provident perferendis sapiente. Lorem ipsum dolor
+sit amet consectetur adipisicing elit. Omnis ex inventore ea nemo amet accusantium aliquid dicta fugiat quia culpa odio, minima officiis quidem maxime velit corrupti! Dolorem, dicta blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Aspernatur in placeat architecto earum, ullam iusto nesciunt nobis perferendis quam, quo consequatur adipisci magni, ipsam asperiores minus odit. Doloribus, dolor expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nostrum aspernatur
+rerum aliquid quae aliquam et harum, vero quibusdam porro. Iusto architecto soluta reprehenderit dolores enim. Earum provident perferendis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex inventore ea nemo amet accusantium aliquid
+dicta fugiat quia culpa odio, minima officiis quidem maxime velit corrupti! Dolorem, dicta blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in placeat architecto earum, ullam iusto nesciunt nobis perferendis quam, quo consequatur
+adipisci magni, ipsam asperiores minus odit. Doloribus, dolor expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nostrum aspernatur rerum aliquid quae aliquam et harum, vero quibusdam porro. Iusto architecto soluta reprehenderit
+dolores enim. Earum provident perferendis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex inventore ea nemo amet accusantium aliquid dicta fugiat quia culpa odio, minima officiis quidem maxime velit corrupti! Dolorem, dicta
+blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in placeat architecto earum, ullam iusto nesciunt nobis perferendis quam, quo consequatur adipisci magni, ipsam asperiores minus odit. Doloribus, dolor expedita.Lorem ipsum
+dolor sit amet consectetur adipisicing elit. Adipisci nostrum aspernatur rerum aliquid quae aliquam et harum, vero quibusdam porro. Iusto architecto soluta reprehenderit dolores enim. Earum provident perferendis sapiente. Lorem ipsum dolor sit amet consectetur
+adipisicing elit. Omnis ex inventore ea nemo amet accusantium aliquid dicta fugiat quia culpa odio, minima officiis quidem maxime velit corrupti! Dolorem, dicta blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in placeat
+architecto earum, ullam iusto nesciunt nobis perferendis quam, quo consequatur adipisci magni, ipsam asperiores minus odit. Doloribus, dolor expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nostrum aspernatur rerum aliquid quae
+aliquam et harum, vero quibusdam porro. Iusto architecto soluta reprehenderit dolores enim. Earum provident perferendis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex inventore ea nemo amet accusantium aliquid dicta fugiat
+quia culpa odio, minima officiis quidem maxime velit corrupti! Dolorem, dicta blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in placeat architecto earum, ullam iusto nesciunt nobis perferendis quam, quo consequatur adipisci
+magni, ipsam asperiores minus odit. Doloribus, dolor expedita.
+<hr>
+<!--
+    conteudo dos hyperlink
+    -Qualquer conteúdo
+  target="_blank"--Abri  meu link nova janela
+  title="Ir para Google"--Quando passa mouse em cima consegue ver descriçao do titulo
+-->
+<a href="http://google.com" title="Ir para Google" target="_blank">
+    <h1>Google </h1>
+</a><br>
+<a href="/imagens/visualdicas_logo.png" download="teste_visualdicas" title="Baixar imagem">Clique aqui </a>
+<hr>
+<a href="http://google.com" title="Ir para google">
+    <h1>Google</h1>
+    <p>Claro que posso</p>
+    <img src="https://source.unsplash.com/random" alt="">
+</a>
+<hr>
+<!--
+    Url e caminhos dos arquivos
+    -Uniform Resource Locator
+     -https://rocketseat.com.br
+     -sequencia de texto que define onde o algo está localizado na web
+    Url usam caminhos para encontrar arquivos 
+        -Caminhos dos arquivos 
+         - onde, no explorador de arquivos, um recurso está localizado, podendo ser imagem, pdf, qualquer arquivo basicamente,
+-->
+
+<a href="../hyperlinks.html">arquivo na pasta anterior</a>
+<br>
+<a href="./urls-caminhos.html">arquivo no diretório raiz</a>
+<br>
+<a href="urls-caminhos.html">arquivo na mesma pasta</a>
+<br>
+<a href="../outros/conteudo-a-element.html">arquivo na pasta outros, que está na pasta anterior</a>
+<br>
+<!--
+    Como navegar pelos diretórios
+    -mesmo diretorio
+    -entrando em diretorio
+    -Saindo de diretorio
+    -diretorio de raiz
+-->
+<a href="./links.html" target="_blank">Abrir arquivo na mesma pasta</a>
+<br>
+<a href="../2-Trabalhar_com_elementos/elementos.html" target="_blank">Arquivo na pasta Trabalhar com elementos , que está na pasta anterior</a>
+<!--
+    Url absoluto vs relativo
+    -Absolutos
+            - inclui protocolos e nome do domínio
+                - por exemplo esta URL http://www.rocketseat.com.br/projeto/index.html é absoluto(mesmo não levando a lugar nenhum, é apenas um exemplo).
+                -sempre apontará para o mesmo local, pois é absoluto
+        -Relativos
+            -relativo à página aberta  no momento
+            -aponta para lugares diferentes
+            -->
+<hr>
+<a href="google.com">relativo: ir para o google</a>
+<br>
+<a href="https://google.com">absoluto: ir para o google</a>

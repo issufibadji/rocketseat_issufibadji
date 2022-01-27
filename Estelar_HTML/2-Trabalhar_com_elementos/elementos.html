@@ -1,0 +1,180 @@
+<!--
+
+  1. Semântica 
+    -Dar significado
+    -Elementos semânticos
+  Anotação: 
+Vamos falar de semântica em HTML.
+# Um dos principais objetivos é dar uma estruturação para o texto, para que haja significado e
+ também uma melhor leitura e para isso usamos elementos semânticos, são mais de 100, mas todos muito importantes, são apenas benefícios.
+  -->
+<!--
+  1.Cabeçalho e parágrafos 
+-->
+<h1>Sobre mim</h1>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, non. </p>
+<p>Eum error repellendus dolores sapiente vero commodi magnam fugit natus consequatur, ullam laboriosam culpa libero dolore, dolorem aperiam assumenda autem. </p>
+<h2>Nascimento </h2>
+<h3>Infância</h3>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iure quae sequi, omnis, cumque voluptate officiis inventore dolorum quos optio impedit veritatis deleniti mollitia beatae! Totam ad maiores earum eaque?
+<h3>Adolescência</h3>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, atque laudantium nulla, nisi voluptas tempore, excepturi voluptate voluptates in debitis rerum. Expedita ducimus quaerat similique culpa accusamus. Voluptates, nesciunt fuga!
+<h2> Trabalho</h2>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit enim possimus fuga laboriosam odio sapiente animi eveniet optio asperiores, sint eum voluptates fugit delectus vero error earum ab ex quasi!
+<a href="#">Saiba mais</a>
+
+<!--
+  2.Lista 
+    -Ordenadas (comando li*quantida  item da lista, por ex: li*10)
+    -Não Ordenadas
+  Anotação:
+    Listas no HTML são feitas da seguinte forma:
+    <li></li> — colocar os elementos da lista. 
+    <ul></ul> — para uma lista não ordenada.
+    <ol></ol> — para uma lista ordenada.
+
+-->
+<!--Lista ordenada-->
+
+
+<h1> Lista dos 10 jogadores mais bem pagos do futebol mundial:</h1>
+<h2> *em dólares</h2>
+<ol>
+    <li>Cristiano Ronaldo (Man United/Portugal) - $ 125 milhões</li>
+    <li>Lionel Messi (PSG/Argentina) - $ 110 milhões</li>
+    <li>Neymar (PSG/Brasil) - $ 95 milhões</li>
+    <li>Kylian Mbappé (PSG/França)- $ 43 milhões</li>
+    <li>Mohamed Salah (Liverpool/Egito) - $ 41 milhões</li>
+    <li>Robert Lewandowski (Bayern/Polônia) - $ 35 milhões</li>
+    <li>Andres Iniesta (Vissel Kobe/Espanha) - $ 35 milhões</li>
+    <li>Paul Pogba (Man United/França) - $ 34 milhões</li>
+    <li>Gareth Bale (Real Madrid/País de Gales) - $ 32 milhões</li>
+    <li>Eden Hazard (Real Madrid/Bélgica) - $ 29 milhões</li>
+</ol>
+
+<!--Lista NAO ordenada-->
+<h1>Suco detox</h1>
+<h2>Ingredientes:</h2>
+<ul>
+    <li>3 folhas de couve;</li>
+    <li>1 laranjas;</li>
+    <li>1 pedacinho gengibre;</li>
+    <li>300 ml de água;</li>
+    <li>Adoçante a gosto;</li>
+    <li>Gelo a gosto.</li>
+</ul>
+<hr>
+
+<!--
+  3. Citação 
+   <blockquote>
+    <cite>
+     <q >
+-->
+<!-- Usado Citação Longa-->
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+    O <strong>Elemento HTML <code>&lt;blockquote&gt;</code> </strong> (ou <em>HTML Block
+  Quotation Element</em>) indica que um texto externo foi citado.
+</blockquote>
+
+<p>De acordo com
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+        <cite>página MDN blockquote</cite></a>:
+</p>
+De acordo com,<cite>
+  <a href="http://www.george-orwell.org/1984/0.html">Nineteen Eighty-Four</a>
+</cite> by George Orwell (Part 1, Chapter 1).
+<p>O elemento quote — <code>&lt;q&gt;</code> — é <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">usado para citações curtas que não precisam de parágrafos ou quebras de linha.</q> --
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+        <cite>MDN q page</cite></a> .</p>
+<!--
+  <blockquote></blockquote> — para uma citação que você queira deixa maior, tendo uma estilização mais diferente.
+ <code></code> — mostra que é um código
+cite — atributo usado para citar a url.
+<cite></cite> — tag usada para colocar o citar link direto no texto.
+<q></q> — citação curtas com aspas.
+-->
+<hr>
+<!--
+  4.Abreviação 
+  <abbr>
+-->
+<p>Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para estruturar nossos documentos da web.</p>
+<p>Obama é presidente dos <abbr title="Estados Unidos da América">EUA</abbr></p>
+<hr>
+<!--
+  Detalhes de contato
+  -address
+-->
+<address>
+  <p>Issufi Badji <br>
+  <strong>Rio de Janeiro, RJ</strong>
+  </p>
+</address>
+
+<!--
+  Lista de descrições
+  -descriçoes
+  <dl>
+    <dt></dt>
+    <dd></dd>
+</dl>
+Usado para marcar uma lista de itens e suas descrições
+<dl></dl> — tag para lista de descrições.
+<dt></dt> — tag para o termo da descrição.
+<dd></dd> — tag para descrição.
+-->
+
+<h2>Glossário</h2>
+<dl>
+    <dt>Hypertext</dt>
+    <dd>É um hiper texto com possibilidades...</dd>
+
+    <dt>Markup</dt>
+    <dd>Marcação do texto</dd>
+
+    <dt>Languague</dt>
+    <dd>Linguagem com sua semântica e sintaxe....</dd>
+</dl>
+<!--
+  Representando codigo de computador 
+      <code>
+        partes gernericas de codigo
+
+          <pre> 
+            Bloco de código, pois essa tag matém os espaços  em brancos  e 
+            recuos que eu colocar no meu código
+         ----------------------------------
+  <pre>
+    <code>
+    </code>
+</pre>
+Para representar códigos usamos as tags:
+<code></code> — muda a cor do conteúdo para representar código.
+<pre></pre> — tag para criar um bloco de código, mantém os espaços em branco.
+-->
+<pre>
+    <code>
+        &lt;tag&gt;Issufi&lt;/tag&gt;
+        &lt;h1>Tags HTML&lt;/h1>
+    </code>
+</pre>
+
+<pre>
+    <code>
+      document. 
+              querySelector("body")
+    </code>
+</pre>
+
+<!--
+  Elementos genérico
+  *<div>
+  *<span>
+ <div></div> — tag usada para agrupar conteúdo.
+<span></span> — tag usada para agrupar texto, em uma ideia mais de linha.
+-->
+<div class="cart">
+    <span>Camiseta</span>
+    <span>r$ 99,00</span>
+</div>
