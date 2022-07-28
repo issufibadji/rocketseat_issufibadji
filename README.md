@@ -1,4 +1,4 @@
-# rockeseatIssufiBadji
+# RockeseatIssufiBadji
 Curso de Rocketseat
 
 # Discover
@@ -29,12 +29,12 @@ Curso de Rocketseat
 
 <div align="center">
   <a href="https://app.rocketseat.com.br/discover/certificates">
-    <img height="300px" alt="Certificado Discover Conectar" src="https://github.com/vitorhonna/rocketseat-discover/blob/main/images/discover-conectar-certificate.jpg">
+    <img height="300px" alt="Certificado Discover Conectar" src="https://github.com/vitorhonna/rocketseat-discover/blob/main/images/">
   </a>
   <p>Código:</p>
   <br>
   <a href="https://app.rocketseat.com.br/discover/certificates">
-    <img height="300px" alt="Certificado Discover Fundamentar" src="https://github.com/vitorhonna/rocketseat-discover/blob/main/images/discover-fundamentar-certificate.jpg">
+    <img height="300px" alt="Certificado Discover Fundamentar" src="https://github.com/vitorhonna/rocketseat-discover/blob/main/images/">
   </a>
   <p>Código:</p>
 </div>
