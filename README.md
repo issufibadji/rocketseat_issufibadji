@@ -38,6 +38,11 @@ Curso de Rocketseat
     <img height="300px" alt="Certificado Discover Fundamentar" src="https://github.com/vitorhonna/rocketseat-discover/blob/main/images/">
   </a>
   <p>Código:</p>
+  <br>
+  <a href="https://app.rocketseat.com.br/discover/certificates">
+    <img height="300px" alt="Certificado Discover Especializar" src="https://github.com/vitorhonna/rocketseat-discover/blob/main/images/">
+  </a>
+  <p>Código:</p>
 </div>
 
 ## Anotações
