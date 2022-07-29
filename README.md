@@ -31,7 +31,7 @@ Curso de Rocketseat
   <a href="https://app.rocketseat.com.br/discover/certificates">
     <img height="300px" alt="Certificado Discover Conectar" src="https://github.com/vitorhonna/rocketseat-discover/blob/main/images/">
   </a>
-  <p>Código:</p>
+  <p>Código:702ef5cc-10ba-49fb-8dac-6b49ce53e04b</p>
   <br>
   <a href="https://app.rocketseat.com.br/discover/certificates">
     <img height="300px" alt="Certificado Discover Fundamentar" src="https://github.com/vitorhonna/rocketseat-discover/blob/main/images/">
