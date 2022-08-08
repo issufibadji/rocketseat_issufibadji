@@ -81,36 +81,178 @@ Nesse curso vamos aprender sobre JavaScript, entender os tipos de dados, variáv
 
 ### **3.✅Tipos de dados**
 
+[Standard built-in objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects)
+
 **✔️Introdução**
 
+Para entendermos mais sobre os tipos de dados, podemos compará-los com elementos da gramática, para aprendermos precisamos saber como escrever, os significados e continuar aprendendo para expandir nosso vocabulário. A dinâmica do aprendizado nesse módulo vai consistir em conceitos e escrita, deixando a aplicação para um outro momento, vamos aprender os tipos de dados mais utilizados.
 
 **✔️String**
+O tipo de dados String consiste em uma cadeia de caracteres, ou seja, textos. Para denotar string no JavaScript são usados aspas duplas ( " " ), aspas simples ( ' ' ) e template literals ou template strings ( ), template literals permitem textos multilinhas e expressões de linguagem com os caracteres ${ }, por exemplo: console.log(A soma de duas unidades é ${1+1}), já as outras não, por exemplo: console.log("Isso é um texto").
+```js
+//string
+console.log("Issufi")
+alert("Issufi");
+console.log('Badji')
+//soma
+console.log(1+2)
 
+//interpolação
+console.log( `soma de ${1+2}`)
+```
 
 **✔️Number**
 
+No JavaScript temos 4 tipos de números, os inteiros (por exemplo: 13), os reais ou float (por exemplo: 83.1), o Not a Number (NaN) e o infinito (Infinity).
+
+```js
+//number int
+console.log(33)
+//soma de int
+console.log(12+13)
+//divisão d float
+console.log(12.5/12)
+//impossivel
+console.log(12.5/"issufi") // NaN
+alert( "not a number" / 2 ); // NaN, such division is erroneous
+//Infinity(false/true)
+console.log(12.5===Infinity)
+//Infinity
+console.log(Infinity)
+alert( Infinity ); // Infinity
+```
 
 **✔️Boolean**
-
+No JavaScript, um dado boolean pode ter apenas 2 valores, verdadeiro (true) e falso (false).
+```js
+//true==>verdadeiro
+console.log(true)
+alert(true);
+//false==>falso
+console.log(false)
+alert(false);
+```
 
 **✔️Undefined vs null**
-
+No JavaScript temos o tipo de dados Undefined, que representa valores indefinidos, e o tipo de dados null, que são muitas vezes confundidos. A diferença dos dois é que null é considerado como um objeto vazio, ou seja, algo indefinido não existe, já algo null existe mas não tem valor algum.
+```js
+//indefinido
+console.log(undefined)
+//objeto sem nada
+console.log(null)
+//null é igual a undefined= false
+console.log(null===undefined)//false
+```
 
 **✔️Object**
+- O tipo de dado Object é estrutural, contendo atributos, ou propriedades, e métodos, ou funcionalidades.
+- Em contraste, os objetos são usados ​​para armazenar coleções de dados e entidades mais complexas. 
+- Um objeto é denotado com os caracteres `{ }`, atributos e métodos com nome: valor . Por exemplo `{ nome: "João", idade: 20 }. `
+* Saiba mais [objeto](https://javascript.info/object)
+```js
+//Objeto
+//{ Prototype: Object }
+console.log({
+  nome: "Issufi",
+  Sobrenome:"Badji",
+  idade:`${50} anos`,
+  ocupacao:"Estudante",
+  andar:function(){
+    console.log('andar')
+  }
+})
 
+```
 
 **✔️Array**
+O tipo de dados Array, ou vetor, também é estrutural, e consiste em uma lista de dados agrupados, um Array é denotado com os caracteres [ ] , por exemplo:` [ "Leite", "Ovos", "Manteiga", 1, 2 ]` . Mais [array](https://javascript.info/array)
 
+```js
+//array
+console.log([
+"Leite",
+"Ovos",
+2,
+5
+])
+```
 
 **✔️Conclusã**
+- Conforme o ECMAScript Standard (o padrão do orgão que padroniza o JavaScript) temos 9 tipos de dados organizados em 4 categorias: 
+  - Primitive, 
+  - Primitive Value, 
+  - Structural e Structural Primitive. 
+- Os primitivos são:`String, Number, Boolean, Undefined, Symbol, BigInt`. 
+Os estruturais são: `Object e Function`. Além destes, temos o primitivo estrutural que consiste apenas no dado `null`
+```js
+
+```
 <hr>
 
 
-### **4.❌Variáveis**
+### **4.✅Variáveis**
 
+**Conhecendo as variáveis**
+
+```js
+
+```
+
+**Tipos dinâmicos**
+
+```js
+
+```
+
+**Scope e var**
+
+```js
+
+```
+
+**Scope let e const**
+
+```js
+
+```
+
+**Nomeando variáveis**
+```js
+
+```
 <hr>
 
-### **5.❌Praticando e avançando**
+### **5.✅Praticando e avançando**
+
+**Declaration assignment var**
+
+```js
+
+```
+**Agrupando declarações**
+
+```js
+
+```
+**Concatenando e interpolando variáveis**
+
+```js
+
+```
+**Objects**
+```js
+
+```
+
+**Arrays**
+```js
+
+```
+
+**Exercícios**
+```js
+
+```
 <hr>
 
 ### **6.❌Funções**
@@ -118,14 +260,12 @@ Nesse curso vamos aprender sobre JavaScript, entender os tipos de dados, variáv
 
 
 ### **7.❌Manipulando dados**
+
 <hr>
-
-
 
 ### **8.❌Expressões e Operadores**
 
 <hr>
-
 
 ### **9.❌Condicionais e controle de fluxo**
 
@@ -178,7 +318,7 @@ Nesse curso vamos aprender sobre JavaScript, entender os tipos de dados, variáv
 <hr>
 
 
-## **<font color=green>Javascript Assíncrono</font>**
+## **<font color=green> Javascript Assíncrono</font>**
 
 
 ### Introdução
