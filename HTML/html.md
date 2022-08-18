@@ -1,7 +1,198 @@
 # rockeseatIssufiBadji
-Curso de Rocketseat
 
-# HTML - Anotações
+# **<font color=red>HTML - Anotações</font>** 
+Paginas da [Documentação de JS MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTML) | [Documentação de JS devdocs.io](https://devdocs.io/html/) | [Documentação de JS nodeschool.io](https://nodeschool.io/pt-br/index.html#workshoppers)
+## **<font color=green>O Guia Estelar de HTML</font>**
+<!-- ❌✅✔️-->
+### **1.✅Conceito**
+**✔️Abertura**
+Nesse curso iremos aprender o que é HTML,seus conceitos essenciais, tags, atributos, aninhamentos,hierarquias de tags, elementos de diretórios.
+
+**✔️Instalando plugin de preview HTML**
+Nesta aula iremos aprender a instalar uma extensão no VSCode que irá nos permitir poder ver o HTML em tempo real enquanto digitamos.
+
+Então você irá até a parte de extensões, que fica na esquerda, sendo o último ícone, digite "HTML Preview" e baixe a extensão.
+
+1. Instalando plugin de preview HTML: Vsc⇒HTML preview 
+2. ctrl+sft+p⇒ preview⇒Html: open preview
+
+**✔️O que é HTML**
+Agora estaremos aprendendo o que é o HTML.
+
+HTML é um acrônimo para Hypertext (hipertexto) Markup (marcação) Language (linguagem), ela não é uma linguagem de programação em si, porém é uma linguagem na forma de escrever, tendo sintaxe e semântica, Hypertext é uma marcação especifica que nos leva a outro texto, isso mais no passado, agora sendo relacionado a imagens, a videos. Bastante simples usar o HTML, podemos ver ele clicando com o botão direito na pagina e selecionar a opção "view Page Source". Agora vamos ver mais sobre o HTML.
+
+HTML⇒ é uma linguagem hipertexto: link, textos etc...
+- HT=> Hypertexto, 
+- M=>MarkP, 
+- L=> Linguagem
+
+**✔️Comentários**
+Comentários servem para nos ajudar a não nos perder em nossos códigos, sendo bem simples abrir um comentário, dessa forma:
+
+```html
+ <!-- comentários -->
+
+ <!--  HT=> Hypertexto, M=>MarkP, L=> Linguagem  -->
+```
+O que há em um comentário não afetará o código.
+
+### **✔️Animação com Tags**
+  - Abertura da Tag
+  - Fechamento das Tag
+  - Conteudo da Tag
+  - Elemento da Tag
+Estaremos vendo a parte que constitui o Markup do HTML, as Tags.
+As Tags funcionam da seguinte forma:
+Você faz a abertura delas, coloca o nome da Tag e as fecha como no exemplo. No caso dessa Tag, seu conteúdo é a de título, juntando a abertura, fechamento e o conteúdo, teremos um Elemento HTML.Por exemplo:
+
+```html
+<!-- Elementos-->
+<h1> TÍTULO </h1>
+<h2>SUBTÍTULO</h2>
+```
+Um elemento HTML é definido por uma tag inicial, algum conteúdo e uma tag final:
+```html
+  <tagname> O conteúdo vai aqui ... </tagname>
+  O elemento HTML é tudo, desde a tag inicial até a tag final:
+
+  <h1> Meu primeiro título </h1>
+  <p> Meu primeiro parágrafo. </p>
+```
+Há também Elementos vazios que diferente do exemplo acima não se fecha daquela forma, mas assim:
+```html
+ <!-- Elementos vavzio(não tem fichamento)-->
+    <img>
+    <input>
+```
+Essa sendo para imagem possuindo atributos, que veremos mais tarde seu funcionamento.
+```html
+ <img src=" " alt=" ">
+```
+- Rosumindo as animação de Tags na HTML⇒ o tag comoça com siblo maior e menor”<>”, por ex:
+Exemplo Explicado
+A `<!DOCTYPE html>`declaração define que este documento é um documento HTML5
+O `<html>`elemento é o elemento raiz de uma página HTML
+O `<head>`elemento contém metainformações sobre a página HTML
+O `<title>`elemento especifica um título para a página HTML (que é mostrado na barra de título do navegador ou na guia da página)
+O `<body>`elemento define o corpo do documento e é um contêiner para todo o conteúdo visível, como títulos, parágrafos, imagens, hiperlinks, tabelas, listas, etc.
+O `<h1>`elemento define um grande título
+O `<p>`elemento define um parágrafo
+
+
+**✔️Atributos HTML**
+  - Formações extras
+  - Configuraçoes
+Os atributos HTML fornecem informações adicionais sobre os elementos HTML.
+- Todos os elementos HTML podem ter atributos
+- Os atributos fornecem informações adicionais sobre os elementos
+- Os atributos são sempre especificados na tag inicial
+- Os atributos geralmente vêm em pares nome / valor como: nome = "valor"
+- Há também os atributos booleanos, que não precisam de conteúdo, booleano significando que apenas possuem dois tipos de valores, sendo eles verdadeiro ou falso, não havendo texto, apenas essas duas opções.
+- O atributo src
+A `<img>`tag é usada para inserir uma imagem em uma página HTML. O src atributo especifica o caminho para a imagem a ser exibida:
+
+```html
+<img src="w3school.png" alt="Imagem">
+```
+**✔️Atributos Booleanos**
+  - Não precisam de conteúdo
+Há também os atributos booleanos, que não precisam de conteúdo, booleano significando que apenas possuem dois tipos de valores, sendo eles verdadeiro ou falso, não havendo texto, apenas essas duas opções.
+
+```html
+<input type="button" disabled>
+```
+**✔️Aspas**
+  - Omissão
+  - Simples
+  - Dupla
+  obs: Usa aspas duplas
+
+Outro fator que devemos levar em consideração são as aspas, recomendado apenas o uso das aspas duplas, para não desencadear problemas no código.
+```html
+    <a href="https://www.google.com.br/" title="Ins't ">Link</a>
+
+    <p title="I'm a tooltip">This is a paragraph.</p>
+```
+**✔️Atributo Globais mais utilizados**
+Atributos globais são atributos aplicáveis em todas as Tags, sendo as principais:
+  - Classe
+  - Contenteditable
+  - data-*
+  - hidden
+  - Style
+  - Tabindex
+  - title
+- `class` — além de classificar as Tags, é usada para aplicar estilo css e também para acessar com o Java Script.
+
+```html
+    <div class="carrinho">
+        <!--usa-se quando tem mais de que um nome serve para usar na js e css-->
+        Conteudo-class
+    </div>
+```
+
+- `contenteditable` — usado para editar o conteúdo da página, porém não é mantido após salvar.
+
+```html
+  <div class="carrinho" contenteditable="true">
+        <!--O conteudo pode ser editado-->
+        Conteudo-contenteditable
+   </div>
+```
+- `data-*` — usado para expandir os tipos de atributos que podemos usar para fazer mais tarde lógica no Java Script , utilizado em css também.
+
+```html
+  <div class="carrinho" data-id="">
+        <!--serve para usar na js e css-->
+        Conteudo-data-id
+  </div>
+```
+- `hidden` — usado para esconder uma Tag.
+
+```html
+   <div class="carrinho" hidden>
+        <!--Esconde o conteudo-->
+        Conteudo-Hidden
+   </div>
+```
+- `id` — usado apenas 1 por Tag para identificação, para também mais tarde usar no Java Script e css.
+
+```html
+    <div class="carrinho" id="car1">
+        <!--id serve só para um nome-->
+        Conteudo-id
+    </div>
+```
+- `style` — aplica a estilização na Tag, normalmente não se usa "style" dentro da Tag, mas sim em arquivos externos.
+
+```html
+  <p style="color:red;">This is a paragraph.</p>
+```
+- `tabindex` — usado para ordenar o Tab na página.
+
+```html
+    <div tabindex="1">tabindex1 </div>
+    <div tabindex="2">tabindex2 </div>
+    <div tabindex="3">tabindex3 </div>
+```
+- `title` — serve para definir um título para a Tag, quando colocamos o mouse descansando em cima do conteúdo da página.
+
+```html
+  <div title="Meu Website">Titulo</div>
+```
+Se você quiser estudar outros Atributos Globais vá ao site **[https://developer.mozilla.org/pt-BR/](https://developer.mozilla.org/pt-BR/)** .
+
+
+
+### **2.✅Links**
+**✔️Abertura**
+**✔️Abertura**
+### **2.✅Tabelas**
+**✔️Abertura**
+**✔️Abertura**
+### **2.✅Cabeçalho**
+**✔️Abertura**
+**✔️Abertura**
 
 ## HTML que faz sentido, para todos
 
