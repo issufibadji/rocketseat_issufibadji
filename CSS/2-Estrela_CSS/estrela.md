@@ -182,3 +182,85 @@ h1{
   padding: 60px;
 }
 ```
+# **Origem do CSS**
+
+Vamos primeiro aprender a adicionar um estilo no nosso documento HTML, certo?
+
+Começaremos pelo inline, que é dentro do próprio HTML, através da tag style, utilizada das seguintes formas:
+```HTML
+<h1 style="color: blue;">Título
+	<strong style="color: red;">alo</strong>
+</h1>
+Ou na head do HTML, assim:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+	<style>
+		h1 {
+		color: blue;
+		}
+
+		strong {
+			color: red;
+		}
+	</style>
+</head>
+```	
+Porém, a forma mais comum, é através da tag link, onde vamos linkar um documento CSS externo, um outro arquivo para nosso documento HTML, feito da seguinte forma:
+```HTML
+<link rel="stylesheet" href="style.css">
+```
+Neste caso, o nosso documento CSS se chama style.css e sua relação com o HTML é de stylesheet.
+
+A última forma é através do @import, que é na verdade uma regra do CSS, portanto, deve ser usada dentro do css, ao invés de dentro do HTML, como as duas primeiras formas, e seu uso é mostrado a seguir:
+```CSS
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'
+```
+Não é recomendado seu uso, pois leva um pouco mais de tempo do que através da tag link, fazendo a página ficar menos responsiva, demorando mais para o carregamento da mesma.
+
+#A cascata (cascading)
+
+A escolha do browser de qual regra aplicar, caso haja muitas regras para o mesmo elemento.
+
+*Seu estilo é lido de cima para baixo*, ou seja, caso haja algum selector com informações conflitantes, o mais embaixo é o que será atribuído.
+São levados em consideração 3 fatores:
+1. A origem do estilo;
+2. A especificidade;
+3. A importância; 
+
+
+### origem do estilo
+inline > tag style > tag link
+
+```HTML
+<!--tag style -->
+<style>
+  h1{
+    color: gray;
+  }
+</style>
+
+<!--inline -->
+<h1 style="color:green">Titulo</h1>
+<p>Paragrafo</p>
+```
+```CSS
+/*tag link */
+h1{
+  color: red;
+}
+h1{
+  color: blue;
+}
+```
+### especificidade
+É um calculo matematica, onde tipo de selector e origem do estilo, possuem valores a serem considerados.
+
+### importância
+
+
