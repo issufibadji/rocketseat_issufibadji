@@ -648,7 +648,7 @@ Identificadores: podemos ter nomes de cores como red, black, gold
 ## Abertura
 Descrição
 Nesse curso vamos aprender como funciona o Box Model, espaçamentos, preenchimentos, bordas, além dos display-block e display-inline. Esses são conceitos base que vão te ajudar a evoluir muito no CSS.
-##Introdução
+## Introdução
 Descrição
 O Box Model é fundamental para fazer layouts para web porque ele vai te dar maior facilidade na hora de aplicar o CSS. Ao entender os conceitos do Box Model muitas questões do CSS começam a fazer sentido.
 
@@ -661,9 +661,64 @@ Conteúdo → content
 Bordas → border
 Preenchimento interno → padding
 Espaços fora da caixa → margin
+
 <div align="center">
  <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/CSS\2-Estrela_CSS\box-model.png">
 </div>
+
+## Box Sizing
+
+Descrição
+Nessa aula vamos ver sobre o box-sizing que é o responsável pelo calculo do tamanho total da caixa (box).
+
+Podemos usar a ferramenta de desenvolvedor do próprio navegador para visualizar as especificações dos elementos da página
+
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/CSS\2-Estrela_CSS\box-sizing.png">
+</div>
+
+💻 Exemplo:
+HTML:
+```HTML
+<div>
+	CSS é incrível!
+</div>
+```
+CSS:
+```CSS
+div {
+   width: 100px; 
+   height: 100px;
+   border: 1px solid red;
+   margin: 10%;
+}
+```
+Esse é o resultado obtido ao usar o código acima:
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/CSS\2-Estrela_CSS\img1.png">
+</div>
+
+Quando o padding é adicionado (`padding: 0 20px;`) faz com que aumente a largura da caixa, deixando de respeitar os 100px de largura:
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/CSS\2-Estrela_CSS\img2.png">
+</div>
+E é por isso que é tão importante conhecer a propriedade do box-sizing.
+
+Por padrão o navegador vai calcular o tamanho da caixa pelo content-box e vai somar com os outros boxes, no exemplo acima no lugar de 100px a caixa vai ficar com uma largura de 140px. Para que isso não aconteça, é possível mudar qual vai ser a referência para o calculo do tamanho da caixa adicionando a propriedade box-sizing: border-box;.
+
+Dessa forma o elemento vai ficar com a largura (width) determinado, que no caso do exemplo citado é de 100px.
+
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/CSS\2-Estrela_CSS\img3.png">
+</div>
+Normalmente usa-se o código abaixo como forma de "resetar" o box-sizing que vem por padrão nos navegadores.
+
+* {
+   box-sizing: border-box;
+}
+O seletor * seleciona todos os elementos da página.
+
+
 
 # **<font color=green>Agora sim, cores</font>**
 ##
