@@ -1,11 +1,15 @@
-# Apresentação de CSS
+# **<font color=red>CSS - Anotações</font>** 
+Paginas da [Documentação de JS MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTML) | [Documentação de JS devdocs.io](https://devdocs.io/html/) | [Documentação de JS nodeschool.io](https://nodeschool.io/pt-br/index.html#workshoppers)
+# **<font color=green>Guia Estelar de CSS</font>**
+
+## Apresentação de CSS
 Vamos ver os fundamentos do CSS, como funciona, o que é o CSS afinal de contas, conceitos básicos como cascatas, especificidade, box model e muito mais.
 
 Para consumir esse curso, é interessante que você já tenha um conhecimento de HTML.
 
 Vamos embarcar nessa jornada?
 
-# Conhecendo o CSS
+## Conhecendo o CSS
 ## Introdução
 ## O que significa CSS ?
   * Cascading Style Sheet
@@ -48,7 +52,7 @@ p {
 }
 ```
 
-# Como fazer comentário no CSS
+## Como fazer comentário no CSS
 
 Os comentários no css não irão afetar seu código, mas pode nos ajudar a lembrar de blocos de códigos ou agrupar e organizar nosso código, deixa dicas para a leitura e ajuda os outros a entenderem nosso código.
 
@@ -57,14 +61,14 @@ Apenas não esqueça de fechar um comentário aberto.
 Os comentários abrem com `/* e terminam com */ .`
 
 Você também pode usar um comentário para desabilitar partes do seu código, o que possibilitaria um debug mais fácil, ou caso deseje fazer alguma alteração sem quebrar todo o seu código.
-## comentários
+### comentários
   * não irão afetar seu código
   * ajudar a lembrar de blocos de códigos
   * deixa dicas para a leitura
   * Apenas não esqueça de fechar um comentário aberto.
   * Os comentários abrem com /* e terminam com */ .
 
-   ## Por exmplo:
+### Por exmplo:
    ```CSS
     /* comentarios em css */
   ```
@@ -77,7 +81,7 @@ h1 {
     background: gray;
 }
 ```
-# Anatomia
+## Anatomia
 Nesta aula, falaremos sobre a anatomia do CSS, como criar esse CSS para poder alterar algum elemento do HTML.
 
 Na verdade, é bem simples, temos o nome de algum elemento, uma chave aberta e uma fechada embaixo, e no meio vamos ter propriedades e seus valores.
@@ -102,14 +106,14 @@ Properties: As coisas a serem alteradas.
 
 Property values: Os novos valores que estamos atribuindo a tais propriedades.
 
-# Selectores
+## Selectores
 Os seletores são o que conectam um elemento HTML com o CSS, existem vários tipos, inclusive, nós vimos um na última aula, o Element/Type selector, mas também temos o seletor global, que é um * (asterisco), ID selector, que é # (cerquilha, cardinal) e o ID do elemento HTML, class selector, que é um . (ponto) e o nome da classe, e mais alguns que podemos entender mais tarde no curso.
 
 Os seletores que mais usaremos serão realmente apenas os anteriormente citados, e vamos entrar em exemplos de como usá-los:
 #selector
 conectar um elemento HTML COM CSS
 
-## Tipo
+### Tipo
   * Global selector `*`
   * Element/Type selector `h1, h2, p, div` 
   * ID Selector `#box, #container`
@@ -150,7 +154,7 @@ h1, h2 {
 }
 ```
 
-# **Box model**
+## **Box model**
 Nesta aula falaremos sobre o conceito de caixas, já que o CSS trabalha com essa ideia de caixas, ou seja, o box model. Mas o quê exatamente é esse box model?
 
 É uma caixa retangular. Essa caixa possui as mesmas propriedades de uma caixa 2D, e tem como propriedades:
@@ -160,7 +164,7 @@ Nesta aula falaremos sobre o conceito de caixas, já que o CSS trabalha com essa
 * Bordas: o border
 * Preenchimento interno: o padding
 * Espaços fora da caixa: a margin
-## <font color=green> Caixa </font>
+### <font color=green> Caixa </font>
 * Quase todo elemento de uma página é considerado uma caixa: Posicionamentos, tamanhos, espaçamentos, bordas, cores, então, em suma, elementos HTML são caixas, assim como quase tudo no CSS.
 
 ```HTML
@@ -182,7 +186,7 @@ h1{
   padding: 60px;
 }
 ```
-# **Origem do CSS**
+## **Origem do CSS**
 
 Vamos primeiro aprender a adicionar um estilo no nosso documento HTML, certo?
 
@@ -234,7 +238,7 @@ São levados em consideração 3 fatores:
 3. A importância; 
 
 
-### origem do estilo
+## origem do estilo
 inline > tag style > tag link
 
 ```HTML
@@ -246,7 +250,7 @@ inline > tag style > tag link
 </style>
 
 <!--inline -->
-<h1 style="color:green">Titulo</h1>
+<h1 style="color:green" class="title"  id="my-title">Titulo <strong>Ola</strong></h1>
 <p>Paragrafo</p>
 ```
 ```CSS
@@ -257,10 +261,392 @@ h1{
 h1{
   color: blue;
 }
+
+#my-title, 
+#my-title strong{
+color:gray;
+}
+
+.title{
+  color:red;
+}
+
+body h1{
+  color:blue;
+}
+*{
+  color:green;
+}
 ```
-### especificidade
+## especificidade
 É um calculo matematica, onde tipo de selector e origem do estilo, possuem valores a serem considerados.
 
-### importância
+É um cálculo matemático, onde cada tipo de seletor e origem do estilo possuem valores a serem considerados.
+
+Os mais fracos são universal selector, combinators e negation pseudo-class, com o valor de 0. 
+Em seguida, com valor de 1, são os element type selector e pseudo-elements.
+
+Também temos os classes e attribute selectors, com valor de 10, ou seja, são mais fortes que os anteriores.
+
+O segundo mais forte, ID selector, com um valor de 100, vence todos os selectors anteriores.
+
+Por fim, temos o inline, com o valor 1000, quaisquer desses selectors anteriormente citado
+
+Resumido 
+0.seleteor universal
+1.elementos typo seletor
+10.classe e atributo de selector
+100.ID selesctor
+1000.Inline
+ ```HTML
+<h1 style="color:green" class="title"  id="my-title">Titulo <strong>Ola</strong></h1>
+<p>Paragrafo</p>
+```
+```CSS
+#my-title, 
+#my-title strong{
+color:gray;
+}
+
+.title{
+  color:red;
+}
+
+body h1{
+  color:blue;
+}
+*{
+  color:green;
+}
+```
+
+## A regra  importância
+
+sintaxe: !important
+
+São raras as ocasiões nas quais se devem usar um iportant, pois é em geral uma má pratica, visto que quebra o fluxo natural da cascata e pode acabar te atrapalhando caso você a deixe em algum lugar no seu código.
+
+Portanto evite ao máximo seu uso.
+
+* Cuidado, evite o uso
+* Não é considerado uma boa prática 
+* Quebra o Fluxo natural da cascata
+*Ele sobre escriver tudo 
 
 
+OBS:
+Só necessario usar quando está usando a biblioteca de outra pessoa que não é seu e vc  não consegue acessar biblioteca dele. Aí pode usar para forçar o seu estilo.
+
+```CSS
+#my-title, 
+#my-title strong{
+color:gray;
+}
+
+.title{
+  color:red;
+}
+
+ h1{
+  color:blue !important;
+}
+*{
+  color:green;
+}
+```
+
+## At rules @
+
+Descrição
+São regras relacionadas ao comportamento do CSS, começa com um sinal de @ seguido do identificador e do valor.
+
+São as seguintes:
+
+`@import` serve para incluir um CSS externo.
+`@media` são regras condicionais para vários dispositivos.
+`@font-face` é para colocar fontes externas.
+`@keyframes` serve para as animations do CSS.
+
+### Exemplos comuns
+
+```CSS
+@import"http://local.co/style.css";
+@import url("http://local.co/style.css");
+
+@media(min-width:500px){
+/* rule here*/
+}
+
+@font-face{
+  /* rules here*/
+}
+
+@fontframe nameofanimation{
+  /*rules here*/
+}
+```
+## Shorthand
+Descrição
+`Shorthand`É basicamente a ideia de junção de propriedades, para que fiquem de forma resumida e legível.
+
+Abaixo um exemplo de propriedades com e sem o shorthand:
+
+```CSS
+{
+    /* background properties */
+    background-color: #000;
+    background-image: url(images/bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    /* background shorthand*/
+    background: #000 url(images/bg.gif) no-repeat left top;
+
+    /* font properties */
+    font-style: italic;
+    font-weight: bold;
+    font-size: .8em;
+    line-height: 1.2;
+    font-family: Arial, sans-serif;
+
+    /* font shorthand */ 
+    font: bold italic .8em/1.2 Arial, sans-serif;
+}
+```
+### Detalhes
+Algumas das características do shorthand:
+
+Não irá considerar propriedades anteriores, ou seja, caso faça um shorthand, apenas ele será considerado, quaisquer propriedades anteriores serão substituídas pelas do shorthand.
+
+Os valores que não forem especificados irão assumir o valor padrão.
+
+Por fim, geralmente, a ordem descrita não importa, mas, caso haja muitas propriedades com valores semelhantes, poderemos encontrar problemas.
+
+### Propriedades que aceitam shorthand
+`all, animation, background,border,border-block-end,border-block-start,border-bottom,border-color,border-image,border-inline-end, border-inline-start,border-left,border-radius,border-right,border-style,border-top,border-width,column-rule,columns,contain-intrinsic-size,flex,flex-flow,font,gap,grid,grid-area,grid-column,grid-row,grid-template,list-style,margin,mask,offset,outline,overflow,padding,place-content,place-items,place-self,scroll-margin,scroll-padding,scroll-timelin,text-decoration,text-emphasis,transition`
+
+**https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties**
+
+## Funções
+Descrição
+Um tipo de valor existente no CSS, é estruturado com um nome seguido de abre e fecha parênteses.
+
+Recebe um argumento, que são seus valores.
+
+Um exemplo de função é:
+
+```CSS
+@import url("http://local.co/style.css");
+{
+color: rgb(255,0,100);
+width:calc(100%-10px);
+
+}
+
+```
+
+## DevTools
+
+Descrição
+Uma das ferramentas mais importantes para o desenvolvedor CSS é o DevTools (do inglês, Ferramentas de Desenvolvedor), é recomendado que você estude e faça uso da mesma, pois será muito utilizada.
+
+f12-> abre DevTools
+
+## Cuidados com a escrita
+Descrição
+É importante prestar atenção à sua escrita do CSS, identar seu código para facilitar a leitura, e mais importante, manter tudo organizado e funcionando!
+## Formatação de texto/erro no escrita de css
+```CSS
+p{
+  margin: 0 auto;
+  padding - left:15px;/*Cuidado com espaços no valores de atributos*/
+
+}
+
+```
+
+## Vendor prefixes
+Descrição
+São coisas que permitem que browsers adiocionem `features` a fim de colocar em uso alguma novidade que vemos no CSS.
+
+Exemplos:
+```CSS
+p {
+	-webkit-background-clip: text; /*Chrome, Safari, iOS e Android*/
+	-moz-background-clip: text; /* Mozilla (Firefox) */
+	-ms-background-clip: text; /* Internet Explorer ou Edge*/
+	-o-background-clip: text; /* Opera */
+```
+Você também pode consultar se a feature pode ser utilizada através dos 
+sites:
+
+[https://ireade.github.io/which-vendor-prefix]
+
+[https://caniuse.com]
+# **<font color=green>Nem tudo são Pixels</font>**
+## Abertura
+Descrição
+Nesse curso vamos aprender como funcionam as unidades de medidas e valores no CSS, como tipos numéricos, unidades comuns, distâncias absolutas e relativas entre os elementos, porcentagens e muito mais.
+
+## Introdução
+Descrição
+Nessa aula vamos falar sobre valores e unidades de medidas no CSS e como podemos usar a documentação do MDN para aprender mais.
+
+Valores e unidades de medidas
+Cada propriedade possui valores `property: value`
+Estudo constante a fim de entender as propriedades e seus valores
+
+### Na prática
+Como conhecer e estudar os valores na documentação?
+`<color> <length>`
+Os termos podem variar `values` ou `data types`
+[Documentação MDN:] [https://developer.mozilla.org/en-US/]
+
+## Tipos numéricos e unidades comuns
+Descrição
+Nessa aula vamos falar sobre tipos numéricos.
+
+### Tipos numéricos
+`<integer>` - número inteiro como `-10 ou 223`
+`<number>` - número decimal como `-2.4, 64 ou 0.234`
+`<dimension>` - é um `<number>` com uma unidade junto: `90deg`, `2s`, `8px`
+`<percentage>` - representa uma fração de outro número: `50%`
+
+### Unidades comuns
+`<length>` - é um dos mais usados no CSS e representa um valor de distância: `px`, `em`, `vw`
+`<angle>` - representa um ângulo: `deg`, `rad`, `turn`
+`<time>` - representa um tempo: `s`, `ms`
+`<resolution>` - representa resoluções para dispositivos: `dpi`
+
+## Distâncias absolutas e relativas
+Descrição
+Nessa aula vamos entender sobre distâncias absolutas e relativas.
+
+### Distâncias absolutas <length>
+
+São fixas e não alteram seu valor.
+
+| Unidade  | Nome                | Equivalência         |
+|----------|---------------------|----------------------|
+| cm       | Centímetros         | 1cm = 96px/2.54      | 
+| in       | Inches (polegadas)  | 1in = 2.54cm = 96px  | 
+| px       | Pixels              | 1px = 1/96th of 1in  |
+
+*o mais comum e mais utilizado é o **px**
+
+*não é recomendado usar cm
+
+### Distâncias relativas
+
+São relativas a um outro valor, pode ser o elemento pai, ou root, ou o tamanho da tela.
+
+Benefício: Maior adaptação aos diferentes tipos de tela.
+
+| Unidade  | Relativo a                                    |
+|----------|-----------------------------------------------|
+| em       | Tamanho da font do elemento pai               |
+| rem      | Tamanho da font do elemento raiz (root/html)  | 
+| vw       | 1% da viewport wid                            |  
+| vh       | 1% da viewport height                         |
+
+Normalmente o tamanho da font padrão do navegador é de 16px e para mudar esse valor temos que fazer a alteração no root ou no elemento html.
+```CSS
+:root {
+	font-size: 18px;
+}
+```
+/* OU */
+```HTML
+html {
+	font-size: 18px;
+}
+```
+O viewport é a parte da tela que está sendo exibida. No caso dos navegadores web, é o que é exibido na janela/tela do documento. Conteúdos que estão fora do viewport só serão exibidos quando feito um scroll da área de visualização.
+
+## Porcentagens %
+Descrição
+
+As porcentagens são valores bem flexíveis
+Em muitos casos é tratado da mesma maneira que as distâncias <length>
+Sempre será relativo a algum valor
+💻 Exemplo
+Relativo ao elemento pai
+```HTML
+<ul>
+	<li>One</li>
+	<li>Two</li>
+	<li>Three
+		<ul>
+			<li>Three A</li>
+			<li>Three B</li>
+			<ul>
+				<li>Three B 2</li>
+			</ul>
+		</ul>
+	</li>
+</ul>
+```
+```CSS
+li {
+    font-size: 80%;
+}
+```
+
+## Position
+Descrição
+
+Posições
+ `<position>`
+
+Representa um conjunto de coordenadas 2D:
+top, right, bottom, left e center
+Usado para alguns tipos de propriedades como o background-position
+
+Não confundir com a propriedade `position`
+
+```HTML
+
+<div class="box">
+  </div>
+```
+
+```CSS
+.box{
+  height: 300px;
+  width:400px;
+  background-image: url(http://source.unsplash.com/random);
+  background-repeat: no-repeat;
+  background-position: right 50px;
+}
+```
+
+## Funções
+Descrição
+ Vamos falar sobre funções no CSS.
+
+Em programação, funções são reconhecidas por causar um reaproveitamento de código.
+Exemplos de funções do CSS:
+
+`rgb()`
+`hsl()`
+`url()`
+`calc()`
+Dentro dos parêntesis são passados argumentos
+
+[Link da documentação do MDN:](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions)
+
+## Strings e identificadores
+Descrição
+Strings: texto envolto em aspas
+```CSS
+.box::after {
+	content: "Isso é uma string" /*o texto ficara dentro da img*/
+}
+```
+Identificadores: podemos ter nomes de cores como red, black, gold
+# **<font color=green>Uma caixa dentro da outra</font>**
+##
+# **<font color=green>Agora sim, cores</font>**
+##
+# **<font color=green>Posicionando foguetes</font>**
+##
