@@ -663,7 +663,7 @@ Preenchimento interno → padding
 Espaços fora da caixa → margin
 
 <div align="center">
- <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/CSS\2-Estrela_CSS\box-model.png">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/box-model.png">
 </div>
 
 ## Box Sizing
@@ -674,7 +674,7 @@ Nessa aula vamos ver sobre o box-sizing que é o responsável pelo calculo do ta
 Podemos usar a ferramenta de desenvolvedor do próprio navegador para visualizar as especificações dos elementos da página
 
 <div align="center">
- <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/CSS\2-Estrela_CSS\box-sizing.png">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/box-sizing.png">
 </div>
 
 💻 Exemplo:
@@ -695,12 +695,12 @@ div {
 ```
 Esse é o resultado obtido ao usar o código acima:
 <div align="center">
- <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/CSS\2-Estrela_CSS\img1.png">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/img1.png">
 </div>
 
 Quando o padding é adicionado (`padding: 0 20px;`) faz com que aumente a largura da caixa, deixando de respeitar os 100px de largura:
 <div align="center">
- <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/CSS\2-Estrela_CSS\img2.png">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/img2.png">
 </div>
 E é por isso que é tão importante conhecer a propriedade do box-sizing.
 
@@ -709,13 +709,15 @@ Por padrão o navegador vai calcular o tamanho da caixa pelo content-box e vai s
 Dessa forma o elemento vai ficar com a largura (width) determinado, que no caso do exemplo citado é de 100px.
 
 <div align="center">
- <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/CSS\2-Estrela_CSS\img3.png">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/CSS/2-Estrela_CSS/img3.png">
 </div>
 Normalmente usa-se o código abaixo como forma de "resetar" o box-sizing que vem por padrão nos navegadores.
 
+```CSS
 * {
    box-sizing: border-box;
 }
+```
 O seletor * seleciona todos os elementos da página.
 
 
