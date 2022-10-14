@@ -114,7 +114,7 @@ Curso de Rocketseat
 
 ## Trilhas
 
-<!-- ❌✅ -->
+<!--❌✅ -->
 
 ### 🌎 Conectar (Carga horária: 2 horas)
 
