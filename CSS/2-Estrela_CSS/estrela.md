@@ -864,7 +864,6 @@ Podemos definir valores por:
 palavra-chave `(blue, transparent)`
 hexadecimal `(#990011)` -->RGB(veremlho 99, verde 00 e azul 11)
 funções: `rgb, rgba, hsl, hsla`
-
 ### Keyword named values
 Descrição
 Nessa aula vamos entender as bases de como aplicar cores no CSS.
@@ -959,7 +958,6 @@ Entendendo esses princípios e com a prática, fica cada vez mais fácil entende
 Referência
 [Documentação do MDN-Color:](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
 [convertacolor:] (https://convertacolor.com/)
-
 <hr>
 
 ## Abertura Background
@@ -991,7 +989,7 @@ HTML
 
 ```HTML
 <header>
-  
+
 </header>
 <main>
     <h1>Evolua rápido com a tecnologia</h1>
@@ -1012,7 +1010,6 @@ header {
     background-color: rgb(55, 100, 50);
 }
 ```
-
 ###  Background-image-repeat
 Descrição
 Para adicionar uma imagem como background podemos usar a propriedade background-image
@@ -1042,6 +1039,10 @@ background-repeat: no-repeat round;
 ###  Background-position
 Descrição
 Com a propriedade background-position podemos mudar a posição da imagem do background.
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg3.PNG">
+</div>
+
 ```CSS
 css{
 /* Pricipais valores */
@@ -1055,6 +1056,10 @@ background-position: center;
 ###  Background-size
 Descrição
 Para mudar o tamanho da imagem do background usamos a propriedade background-size.
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg4.PNG">
+</div>
+
 ```CSS
 css{
 /* Values */
@@ -1070,14 +1075,27 @@ background-size: auto auto;
 ```
 ###  Background-origin-clip
 Descrição
-A propriedade background-origin é quem define o ponto de origem de uma imagem específica.
+A propriedade `background-origin` é quem define o ponto de origem de uma imagem específica.
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg5.PNG">
+</div>
+
 ```CSS
 css{
 /* Principais valores */
 background-origin: border-box;
 background-origin: padding-box;
 background-origin: content-box;
-O background-clip define se a cor ou imagem do background iniciam debaixo de sua área de borda, preenchimento ou conteúdo.
+}
+```
+O `background-clip` define se a cor ou imagem do `background` iniciam debaixo de sua área de borda, preenchimento ou conteúdo.
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg5-1.PNG">
+</div>
+
+```CSS
+css{
+
 /* Principais valores */
 background-clip: border-box;
 background-clip: padding-box;
@@ -1085,23 +1103,29 @@ background-clip: content-box;
 background-clip: text;
 }
 ```
-
 ###  Background-attachment
 Descrição
 A propriedade background-attachment determina se a posição da imagem vai ser fixa ou se vai rolar junto com o conteúdo.
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg6.PNG">
+</div>
+
 ```CSS
 css{
 /* Principais valores */
 background-attachment: scroll;
-background-attachment: fixed;
+background-attachment: fixed; /*fixa img de fundo quando move scroll*/
 background-attachment: local;
 }
 ```
 ###  Shorthand
 Descrição
-Podemos usar o shorthand background para definir todos os valores do background
+Podemos usar o shorthand background para definir todos os valores do background ou seja, agrupa todos valores.
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg7.PNG">
+</div>
 
-###  Gradient
+### Gradient
 Descrição
 
 `linear-gradient()` é a função usada para criar gradient linear com o CSS.
@@ -1110,6 +1134,10 @@ css{
 background: linear-gradient(45deg, red, yellow)
 }
 ```
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg8.PNG">
+</div>
+
 `radial-gradient()` é a função usada para criar gradient circular.
 
 ```CSS
@@ -1118,13 +1146,19 @@ background: radial-gradient(green, red, yellow)
 background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 0, 0, 0.2))
 }
 ```
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg9.PNG">
+</div>
+
 ###  Múltiplos valores
 Descrição
 Podemos aplicar múltiplos backgrounds em um mesmo elemento, podendo ter cor sólida, gradiente ou imagem. Para isso basta separar por vírgula cada background.
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg10.PNG">
+</div>
 
 ###  Experimentar
 Descrição
 A partir daqui você deve praticar e fazer vários experimentos com a propriedade background para que você possa entender cada vez mais os conceitos.
-
 # **<font color=green>Posicionando foguetes</font>**
 ##
