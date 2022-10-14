@@ -1,7 +1,7 @@
 # rockeseatIssufiBadji
 
 # **<font color=red>HTML - Anotações</font>** 
-Paginas da [Documentação de JS MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTML) | [Documentação de JS devdocs.io](https://devdocs.io/html/) | [Documentação de JS nodeschool.io](https://nodeschool.io/pt-br/index.html#workshoppers)
+Paginas da [Documentação de JS MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTML) | [Documentação de JS devdocs.io](https://devdocs.io/html/) | [Documentação de JS nodeschool.io](https://nodeschool.io/pt-br/index.html#workshoppers)| [Tutoriale Html](https://tutorialehtml.com/pt/)
 ## **<font color=green>O Guia Estelar de HTML</font>**
 <!-- ❌✅✔️-->
 ### **1.✅Conceito**
@@ -246,6 +246,35 @@ Semelhante a tag `video`.
 Adiciona conteúdo externo.
 
 Aceita os atributos: src, width, height, title (para acessibilidade), allow="", allowfullscreen, frameborder="0", style
+```html
+<iframe width="100% " height="300 " scrolling="no " frameborder="no " allow="autoplay " src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1362993376&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true "></iframe>
+    <div style="font-size: 10px; 
+    color: #cccccc;
+    line-break: anywhere;
+    word-break: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    font-family: Interstate,
+    Lucida Grande,
+    Lucida Sans Unicode,
+    Lucida Sans,
+    Garuda,
+    Verdana,
+    Tahoma,
+    sans-serif;
+    font-weight:100; ">
+        <a href="https://soundcloud.com/issufi-badji " title="Issufi Badji " target="_blank " style="color: #cccccc; 
+        text-decoration: none;
+         ">Issufi Badji</a> ·
+        <a href="https://soundcloud.com/issufi-badji/horned-viper " title="Horned Viper" target="_blank " style="color: #cccccc; 
+        text-decoration: none; ">Horned Viper
+        </a>
+    </div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14701.996612563547!2d-43.12399595206512!3d-22.894952920567658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x998163372c483f%3A0xf1f22d78a2736925!2sMuseu%20de%20Arte%20Contempor%C3%A2nea%20de%20Niter%C3%B3i!5e0!3m2!1spt-BR!2sbr!4v1665760866336!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+```
+
 
 - `img`
 
@@ -276,6 +305,7 @@ Scalable Vector Graphics, imagens vetorizadas. Aceita atributos como width e hei
 
 Se for um arquivo, pode ser adicionado com a tag `img`
 
+[tutorialehtml-video-audio](https://tutorialehtml.com/pt/html-tutorial-embed-video/)
 #
 
 ## Formulários de outro planeta
