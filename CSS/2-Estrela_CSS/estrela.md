@@ -650,7 +650,6 @@ Descrição
 Nesse curso vamos aprender como funciona o Box Model, espaçamentos, preenchimentos, bordas, além dos display-block e display-inline. Esses são conceitos base que vão te ajudar a evoluir muito no CSS.
 ## Introdução
 Descrição
-
 O **Box Model** é fundamental para fazer layouts para web porque ele vai te dar maior facilidade na hora de aplicar o CSS. Ao entender os conceitos do Box Model muitas questões do CSS começam a fazer sentido.
 
 ### O que é o Box Model?
@@ -669,7 +668,6 @@ Espaços fora da caixa → `margin`
 <div align="center">
  <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/box-model.png">
 </div>
-
 ## Box Sizing
 
 Descrição
@@ -725,23 +723,18 @@ Normalmente usa-se o código abaixo como forma de "resetar" o box-sizing que vem
 }
 ```
 O seletor * seleciona todos os elementos da página.
-
-
 ## Display-block-inline
 Descrição
 
 `display: block; vs display: inline;`
 Como as caixas se comportam em relação as outras caixas
 Comportamento externo das caixas
-
 ## Display Block
 Ocupa toda a linha, colocando o próximo elemento abaixo desse
 <div align="center">
  <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/img4.png">
 </div>
-
 width e height são respeitados no  Display Block
-
 <div align="center">
  <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/img5.png">
 </div>
@@ -849,8 +842,285 @@ Não modifica o tamanho da caixa, pois não é parte do Box Model
 Poderá ser diferente de retangular
 Não permite ajuste individuais
 Mais usado pelo user agent para acessibilidade
-
 # **<font color=green>Agora sim, cores</font>**
-##
+## Abertura cores
+Descrição
+Nesse curso vamos aprender a como trabalhar com cores e backgrounds nos nossos elementos. Adicionar cores é algo necessário para qualquer layout e saber como trabalhar com imagens e cores de fundo é essencial.
+### Introdução
+Descrição
+
+**Cores**
+Usamos CSS para alterar cores do nosso documento.
+
+**Tipos**
+background-color (para caixas)
+color (para textos)
+border-color (para caixas)
+outros
+
+**Valores**
+Podemos definir valores por:
+
+palavra-chave `(blue, transparent)`
+hexadecimal `(#990011)` -->RGB(veremlho 99, verde 00 e azul 11)
+funções: `rgb, rgba, hsl, hsla`
+
+### Keyword named values
+Descrição
+Nessa aula vamos entender as bases de como aplicar cores no CSS.
+```CSS
+element{
+  /* Keiword values*/
+color: currentcolor;
+
+/*<nam-color> values*/
+color:red;
+color:orange;
+color:tan;
+}
+```
+Por exemplo:
+HTML
+```HTML
+<div>
+    <h1>Um texto aqui</h1>
+    <p>Mais texto</p>
+</div>
+```
+CSS
+
+```CSS
+div {
+    color: blue;
+}
+
+h1 {
+    color: red;
+}
+p{
+  color:currentcolor;
+}
+```
+### Hexadecimal
+Descrição
+Nessa aula vamos aprender a trabalhar com valores hexadecimal
+
+```CSS
+element{
+/*<hex-color> values 0-9 e A-F*/
+color: #090; /* RED, GREEN, BLUE */
+color: #009900;
+color: #090a;
+color:#009900aa;/* o quarto grupo de num é trasparencia de cor*/
+}
+```
+### RGB
+Descrição
+
+RGB → `Red, Green e Blue`
+O alpha representa a transparência da cor
+```CSS
+element{
+/*<rgb()> values */
+color: rgb(34, 12, 64, 0.6) /* 0-255 */
+color: rgba(255, 12, 64, 0.6)
+}
+```
+### HSL
+Descrição
+HSL → `Hue - Saturation - Lightness`
+
+
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/hsl-color-wheel.png">
+</div>
+
+```CSS
+element{
+  /** <hls()>values*/
+color: hsl(180, 100%, 50%, 60%)
+color: hsla(180, 100%, 50%, 60%)
+}
+```
+### Global values
+Descrição
+Nessa aula vamos ver sobre os valores globais da propriedade color.
+```CSS
+element{
+/* Global values */
+color: inheritr; /* Herda a cor do elemento anterior */
+color: initial; /* Volta a sua cor inicial */
+color: unset; /* Pega a cor do contexto */
+}
+```
+### Conclusão
+Descrição
+Entendendo esses princípios e com a prática, fica cada vez mais fácil entender como aplicar cores no CSS.
+Referência
+[Documentação do MDN-Color:](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
+[convertacolor:] (https://convertacolor.com/)
+
+<hr>
+
+## Abertura Background
+Descrição
+Nesse curso vamos aprender a como trabalhar com cores e backgrounds nos nossos elementos. Adicionar cores é algo necessário para qualquer layout e saber como trabalhar com imagens e cores de fundo é essencial.
+###  Introdução
+Descrição
+Nas próximas aulas nós vamos ver mais sobre a propriedade background.
+
+**Background** Define um fundo para nosso elemento Sua área de atuação é a caixa toda Por padrão, é transparente
+
+Exemplos:
+
+- Usar cores solidas
+- Usar imagens
+- Controlar
+   - a posição das imagens
+   - se elas se repetem ou não
+   - o tamanho delas na caixa
+- Usar cor e imagem juntas
+- Usar cor gradiente 
+###  Background-color
+Descrição
+A propriedade background-color define a cor de fundo do elemento selecionado.
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg1.png">
+</div>
+HTML
+```HTML
+<header>
+
+</header>
+<main>
+    <h1>Evolua rápido com a tecnologia</h1>
+    <p>Junte-se a milhares de devs e acelere
+    na direção dos seus objetivos</p>
+</main>
+```
+CSS
+```CSS
+* {
+    margin: 0;
+}
+
+header {
+    height: 100px;
+    border: 7px dashed red;
+    background-color: rgb(55, 100, 50);
+}
+```
+
+###  Background-image-repeat
+Descrição
+Para adicionar uma imagem como background podemos usar a propriedade background-image
+Por padrão a imagem vai se repetir e podemos modificar essa opção usando a propriedade background-repeat
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg2.png">
+</div>
+```CSS
+css{
+/* Values */
+background-repeat: repeat-x;
+background-repeat: repeat-y;
+background-repeat: repeat;
+background-repeat: space;
+background-repeat: round;
+background-repeat: no-repeat;
+
+/* Podedmos usar 2 valores: horizontal | vertical */
+background-repeat: repeat space;
+background-repeat: repeat repeat;
+background-repeat: round space;
+background-repeat: no-repeat round;
+}
+```
+###  Background-position
+Descrição
+Com a propriedade background-position podemos mudar a posição da imagem do background.
+```CSS
+css{
+/* Pricipais valores */
+background-position: top;
+background-position: bottom;
+background-position: left;
+background-position: right;
+background-position: center;
+}
+```
+###  Background-size
+Descrição
+Para mudar o tamanho da imagem do background usamos a propriedade background-size.
+```CSS
+css{
+/* Values */
+background-size: cover;
+background-size: contain;
+
+/* Podemos usar 2 valores, o primeiro é para a largura da imagem e o segundo é para a altura */
+background-size: 40% auto;
+background-size: 2em 25%;
+background-size: auto 8px;
+background-size: auto auto;
+}
+```
+###  Background-origin-clip
+Descrição
+A propriedade background-origin é quem define o ponto de origem de uma imagem específica.
+```CSS
+css{
+/* Principais valores */
+background-origin: border-box;
+background-origin: padding-box;
+background-origin: content-box;
+O background-clip define se a cor ou imagem do background iniciam debaixo de sua área de borda, preenchimento ou conteúdo.
+/* Principais valores */
+background-clip: border-box;
+background-clip: padding-box;
+background-clip: content-box;
+background-clip: text;
+}
+```
+
+###  Background-attachment
+Descrição
+A propriedade background-attachment determina se a posição da imagem vai ser fixa ou se vai rolar junto com o conteúdo.
+```CSS
+css{
+/* Principais valores */
+background-attachment: scroll;
+background-attachment: fixed;
+background-attachment: local;
+}
+```
+###  Shorthand
+Descrição
+Podemos usar o shorthand background para definir todos os valores do background
+
+###  Gradient
+Descrição
+
+`linear-gradient()` é a função usada para criar gradient linear com o CSS.
+```CSS
+css{
+background: linear-gradient(45deg, red, yellow)
+}
+```
+`radial-gradient()` é a função usada para criar gradient circular.
+
+```CSS
+css{
+background: radial-gradient(green, red, yellow)
+background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 0, 0, 0.2))
+}
+```
+###  Múltiplos valores
+Descrição
+Podemos aplicar múltiplos backgrounds em um mesmo elemento, podendo ter cor sólida, gradiente ou imagem. Para isso basta separar por vírgula cada background.
+
+###  Experimentar
+Descrição
+A partir daqui você deve praticar e fazer vários experimentos com a propriedade background para que você possa entender cada vez mais os conceitos.
+
 # **<font color=green>Posicionando foguetes</font>**
 ##
