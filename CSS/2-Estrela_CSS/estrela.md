@@ -985,7 +985,7 @@ Exemplos:
 Descrição
 A propriedade background-color define a cor de fundo do elemento selecionado.
 <div align="center">
- <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg1.png">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg1.PNG">
 </div>
 HTML
 ```HTML
@@ -999,6 +999,7 @@ HTML
 </main>
 ```
 CSS
+
 ```CSS
 * {
     margin: 0;
@@ -1015,9 +1016,11 @@ header {
 Descrição
 Para adicionar uma imagem como background podemos usar a propriedade background-image
 Por padrão a imagem vai se repetir e podemos modificar essa opção usando a propriedade background-repeat
+
 <div align="center">
- <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg2.png">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg2.PNG">
 </div>
+
 ```CSS
 css{
 /* Values */
