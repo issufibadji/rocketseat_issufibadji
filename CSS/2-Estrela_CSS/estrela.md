@@ -988,9 +988,10 @@ A propriedade background-color define a cor de fundo do elemento selecionado.
  <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/bg1.PNG">
 </div>
 HTML
+
 ```HTML
 <header>
-
+  
 </header>
 <main>
     <h1>Evolua rápido com a tecnologia</h1>
