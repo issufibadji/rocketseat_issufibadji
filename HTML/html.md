@@ -404,9 +404,9 @@ Se for um arquivo, pode ser adicionado com a tag `img`
 <svg width="200" height="200"> <circle cx="100" cy="100" r="80" stroke="blue" stroke-width="6" fill="yellow" /></svg>
 
 <svg width="200" height="200"> <rect cx="100" cy="100" r="80" stroke="red" 
-      width="100%" height="100%"
-      stroke-width="6" fill="green" /></svg>
-    <hr>
+  width="100%" height="100%"
+  stroke-width="6" fill="green" /></svg>
+<hr>
 <img src="./assets/retangulo.svg" alt=""> <br>
 <a href=" https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</a>
 
