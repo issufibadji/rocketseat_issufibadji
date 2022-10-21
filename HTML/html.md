@@ -35,8 +35,7 @@ Comentários servem para nos ajudar a não nos perder em nossos códigos, sendo 
  <!--  HT=> Hypertexto, M=>MarkP, L=> Linguagem  -->
 ```
 O que há em um comentário não afetará o código.
-
-### **✔️Animação com Tags**
+### **2.✔️Animação com Tags**
   - Abertura da Tag
   - Fechamento das Tag
   - Conteudo da Tag
@@ -106,7 +105,6 @@ Há também os atributos booleanos, que não precisam de conteúdo, booleano sig
   - Simples
   - Dupla
   obs: Usa aspas duplas
-
 Outro fator que devemos levar em consideração são as aspas, recomendado apenas o uso das aspas duplas, para não desencadear problemas no código.
 ```html
     <a href="https://www.google.com.br/" title="Ins't ">Link</a>
@@ -181,22 +179,14 @@ Atributos globais são atributos aplicáveis em todas as Tags, sendo as principa
   <div title="Meu Website">Titulo</div>
 ```
 Se você quiser estudar outros Atributos Globais vá ao site **[https://developer.mozilla.org/pt-BR/](https://developer.mozilla.org/pt-BR/)** .
-
-
-
-### **2.✅Links**
+### **3.✅Links**
 **✔️Abertura**
 **✔️Abertura**
-### **2.✅Tabelas**
+### **4.✅Tabelas**
+### **5.✅Cabeçalho**
 **✔️Abertura**
-**✔️Abertura**
-### **2.✅Cabeçalho**
-**✔️Abertura**
-**✔️Abertura**
-
 ## **<font color=green>HTML que faz sentido, para todos</font>**
 <!-- ❌✅✔️-->
-
 Elementos semânticos
 
 - `blockquote` : bloco de citação
@@ -214,7 +204,6 @@ Elementos Genéricos Não-Semânticos
 - `div` : elemento de bloco, usar classes para mais significado
 - `span` : elemento de texto, usar classes para mais significado
 
-#
 
 ## **<font color=green>Posso ver e ouvir o HTML</font>**
 
