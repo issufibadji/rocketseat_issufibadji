@@ -181,7 +181,6 @@ Atributos globais são atributos aplicáveis em todas as Tags, sendo as principa
 Se você quiser estudar outros Atributos Globais vá ao site **[https://developer.mozilla.org/pt-BR/](https://developer.mozilla.org/pt-BR/)** .
 ### **3.✅Links**
 **✔️Abertura**
-**✔️Abertura**
 ### **4.✅Tabelas**
 ### **5.✅Cabeçalho**
 **✔️Abertura**
