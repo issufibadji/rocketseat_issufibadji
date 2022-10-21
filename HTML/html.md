@@ -194,7 +194,8 @@ Se você quiser estudar outros Atributos Globais vá ao site **[https://develop
 **✔️Abertura**
 **✔️Abertura**
 
-## HTML que faz sentido, para todos
+## **<font color=green>HTML que faz sentido, para todos</font>**
+<!-- ❌✅✔️-->
 
 Elementos semânticos
 
@@ -215,7 +216,7 @@ Elementos Genéricos Não-Semânticos
 
 #
 
-## Posso ver e ouvir o HTML
+## **<font color=green>Posso ver e ouvir o HTML</font>**
 
 - `video`
 
@@ -237,16 +238,77 @@ Fallback content:
 </video>
 ```
 
+```html
+<!--
+    <video>
+      -src
+      -controls
+      -se não funcioar?
+        -fallback content
+      -source
+        -src
+        -type
+      -sobre serviços de terceiros
+ -->
+<video controls width="800" poster="./assets/ball.png">   
+  <source src="./assets/rocket.mp4" type="video/mp4">
+  <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4'>
+  <source src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm' />
+  <p>Este Browser não suport video</p>
+</video>
+```
+
 - `audio`
 
 Semelhante a tag `video`.
+
+```html
+  <!--
+  <audio>
+    -src
+    -controls
+    -se não funcioar?
+      -fallback content
+    -source
+      -src
+      -type
+    -sobre serviços de terceiros
+-->
+<audio controls autoplay> 
+    <source src="./assets/viper.mp3" type="audio/mp3">
+    <source src="./assets/viper.ogg" type="audio/ogg">
+    <p>Este Browser não suport video</p>
+</audio>
+```
+
 
 - `iframe` : inline frame element
 
 Adiciona conteúdo externo.
 
 Aceita os atributos: src, width, height, title (para acessibilidade), allow="", allowfullscreen, frameborder="0", style
+
 ```html
+<!--
+      <iframe>
+        -atributos
+        -src
+        -height
+        -width
+        -titlr(acessabidade)
+        -allowfullscreen
+        -frameborder
+    -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ft1rmupJFcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14701.996612563547!2d-43.12399595206512!3d-22.894952920567658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x998163372c483f%3A0xf1f22d78a2736925!2sMuseu%20de%20Arte%20Contempor%C3%A2nea%20de%20Niter%C3%B3i!5e0!3m2!1spt-BR!2sbr!4v1665760866336!5m2!1spt-BR!2sbr"
+width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+  <hr>
+
+
 <iframe width="100% " height="300 " scrolling="no " frameborder="no " allow="autoplay " src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1362993376&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true "></iframe>
     <div style="font-size: 10px; 
     color: #cccccc;
@@ -281,6 +343,7 @@ Aceita os atributos: src, width, height, title (para acessibilidade), allow="", 
 Aceita os atributos: src, width, height, alt, title...
 
 ```html
+
 <img
   src="https://source.unsplash.com/random"
   alt="alt text"
@@ -288,22 +351,67 @@ Aceita os atributos: src, width, height, alt, title...
 />
 ```
 
+```html
+<!--
+Background image
+
+-com a tag style
+-somente para estilo
+-não é semantico e falta significado
+-->
+<p style="background-image: url('./icon.png')">Imagem</p>
+
+```
 - `figure`
 
 Adiciona imagens de maneira semântica, aceitando captions, por exemplo:
 
 ```html
-<figure>
-  <img src="" alt="" />
-  <figcaption>Image caption</figcaption>
-</figure>
+<a href="https://google.com">
+  <figure>
+      <img src="https://source.unsplash.com/random" alt="imagem" title="Coloca titulo img" height="200px">
+      <figcaption>Coloca um titulo na imagem</figcaption>
+  </figure>
+</a>
 ```
 
 - `svg`
 
 Scalable Vector Graphics, imagens vetorizadas. Aceita atributos como width e height e tags filhas para descrever elementos, como `circle`, `rect`...
 
+`<svg>` é uma marcação, estilo html, mas não é para textos, e sim para fazer imagens.possuimos elementos para gerar formas.
+
+para entender melhor
+-Imagem rasterizada x Imagem vetorizada
+
+Beneficios
+-Mais leve
+-Mais detalhada
+-Maior acessibilidade e SEO
+-Pode ser editada via CSS ou atributos
+
+Desvantagens
+-Pode ser mais complicado de trabalhar 
+-Quanto mais complexa a imagem, mais trabalho para o navegador
+-Navegadores mais antigo não possuem suporte a esse tag
+
+Para fotografias, ainda prefira imagens rasterizadas.(.png, .jpg, .jpeg) 
+
 Se for um arquivo, pode ser adicionado com a tag `img`
+
+```html
+
+<svg width="200" height="200"> <circle cx="100" cy="100" r="80" stroke="blue" stroke-width="6" fill="yellow" /></svg>
+
+<svg width="200" height="200"> <rect cx="100" cy="100" r="80" stroke="red" 
+      width="100%" height="100%"
+      stroke-width="6" fill="green" /></svg>
+    <hr>
+<img src="./assets/retangulo.svg" alt=""> <br>
+<a href=" https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</a>
+
+```
+
 
 [tutorialehtml-video-audio](https://tutorialehtml.com/pt/html-tutorial-embed-video/)
 #
