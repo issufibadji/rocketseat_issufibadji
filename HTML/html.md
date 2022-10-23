@@ -187,7 +187,6 @@ Se você quiser estudar outros Atributos Globais vá ao site **[https://develop
 ## **<font color=green>HTML que faz sentido, para todos</font>**
 <!-- ❌✅✔️-->
 Elementos semânticos
-
 - `blockquote` : bloco de citação
 - `cite` : autor da citação
 - `header` : cabeçalho (pode mais de um por página)
@@ -402,9 +401,15 @@ Se for um arquivo, pode ser adicionado com a tag `img`
 
 
 [tutorialehtml-video-audio](https://tutorialehtml.com/pt/html-tutorial-embed-video/)
-#
+## **<font color=green>Formulários de outro planeta</font>**
 
-## Formulários de outro planeta
+### Form
+#### Introdução
+**O que são forms**
+ *form*  para que serve formulario: serve para capturar dados de entrada (input)/ou usuario.
+ #### Estrutura
+ **Form**
+ `<form> ` é um elemento que vai definir formulario. E é um container estilo  `<section> `  `<footer> `
 
 \- `form`
 
@@ -415,6 +420,14 @@ Atributos básicos:\
 ```html
 <input action="login" method="post"></form>
 ```
+
+ **Fieldset legend**
+ **Label**
+ **Button**
+ **Datalist**
+ **FTags de** 
+
+
 
 Para deixar o formulário mais semântico, utilizar as tags `fieldset` e `legend`:
 
