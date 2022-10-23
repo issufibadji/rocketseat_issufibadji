@@ -412,9 +412,9 @@ Se for um arquivo, pode ser adicionado com a tag `img`
  **Form**
  `<form> ` é um elemento que vai definir formulario. E é um container estilo  `<section> `  `<footer> `
 
-\- `form`\
+\- `form`
 
-Atributos básicos:\
+Atributos básicos:
 -> _Action_: para onde o formulário vai ser submetido, se vazio envia para a página onde estou\
 -> _Method_: método http para envio (GET, POST...)
 
