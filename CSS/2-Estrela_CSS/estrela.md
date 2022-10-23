@@ -1539,5 +1539,187 @@ footer{
   background-color:aquamarine
 }
 ```
-
 # **<font color=green>App bonito, até nos textos</font>**
+## Trabalhando com fontes
+### Abertura
+Descrição
+Nesse curso vamos aprender aplicar estilos CSS nos textos para deixar nossos layouts mais interessantes.
+### Introdução font-properties
+Descrição
+A tipografia transmite uma mensagem, por exemplo, quando queremos dar uma ênfase no texto nós podemos escrever o mesmo em negrito.
+Nós podemos transmitir uma mensagem diferente dependendo do estilo que escrevemos o texto.
+Algumas das propriedades de fonts do CSS que podem nos ajudar a transmitir uma mensagem através dos textos da página são:
+`font-family`
+`font-weight`
+`font-style`
+`font-size`
+### Font-family
+Descrição
+**Font Family**
+* Tipo de fonte de um elemento
+* Lista de fontes e ordem de prioridade
+* inclui **fallback** font
+```CSS
+p {
+  font-family: "Times New Roman", Times, serif;
+}
+```
+Alguns tipos de fonts:
+
+serif (com serifa)
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/font1.png">
+</div>
+sans-serif (sem serifa)
+<div align="center">
+ <img height="300px" alt="Box-model" src="https://github.com/issufibadji/rocketseatIssufiBadji/blob/master/CSS/2-Estrela_CSS/font2.png">
+</div>
+### Font-weight
+Descrição
+**Font Weight** significa Peso da fonte
+Valores: `normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900`
+Dependendo da família da fonte não conseguimos utilizar todos os pesos de fonte
+```CSS
+p {
+	font-weight: bold;
+}
+```
+Referência
+[W3.org](https://www.w3.org/TR/css-fonts-3/)
+### Font-style
+Descrição
+**Font Style** é o estilo da fonte
+Valores: `normal | italic | oblique`
+Os valores que podem ser aplicados dependem da fonte usada
+```CSS
+span {
+	font-style: italic;
+}
+```
+### Font-size
+Descrição
+**Font Size**  é o tamanho da fonte
+```CSS
+p {
+	font-size: 18px;
+}
+```
+### Web-fonts
+
+**Fontes do sistema x Fontes da web**
+**Fontes do sistema** são as fontes que estão instaladas na máquina do usuário e nem sempre o cliente vai ter instalado as fontes usadas no projeto e isso pode fazer com que os estilos dos textos não sejam aplicados corretamente, mas para resolver esses casos podemos preparar nossas fonts para web ou usar *fontes da web*.
+
+Como usar fontes para web?
+`@font-face`
+`@import`
+`link`
+Referência
+[fonts.google](https://fonts.google.com/)
+[tricks](https://css-tricks.com/snippets/css/using-font-face-in-css/0)
+## Mais estilos para os textos
+### Font-variant e font-stretch
+Descrição
+**Font Variant** Faz variações na apresentação da fonte
+```CSS
+p {
+	font-variant: small-caps;
+}
+```
+[developer.mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant)
+
+**Font Stretch** faz alargamento ou encolhimento da fonte. 
+*Aceita palavras-chaves como:* `expanded, condensed, normal` e aceita porcentagens de 50% a 200%. 
+Essa propriedade não vai funcionar em todas as fontes
+```CSS
+p {
+	font-stretch: expanded;
+}
+```
+[developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch)
+
+Referência
+[developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+### Letter e word-spacing
+Descrição
+**Letter spacing** define o espaçamento entre os caracteres
+```CSS
+p {
+	letter-spacing: 4px;
+}
+```
+[developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+
+**Word spacing** define o espaçamento entre palavras
+```CSS
+p {
+	word-spacing: 1em;
+}
+```
+[developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing)
+### Line-height e text-transform
+Descrição
+**Line height** Define os espaços entre linhas e pode ser com unidades ou sem unidades de medida
+*Valores comuns:* 1.5 ou 2
+```CSS
+p {
+	line-height: 1.5;
+}
+```
+[developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
+
+**Text transform** é a transformação do texto.
+*Valores podem ser:* `none | capitalize | uppercase | lowercase | full-width | full-size-kana`
+```CSS
+p {
+	text-transform: uppercase;
+}
+```
+[developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+### Text-decoration
+Descrição
+**Text decoration** é a aparência decorativa de um texto.
+*line:* `underline | overline | line-through`
+
+podemos aplicar mais de 1 valor
+*style:*  `wavy | dotted | double | dashed | solid`
+*color:* `<color> values`
+```CSS
+h1 {
+	text-decoration: underline; /* shorthand */
+}
+
+p {
+  text-decoration: wavy overline blue; /* shorthand */
+}
+```
+[developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+### Text-align
+Descrição
+**Text align** é a alinhamento de um texto
+*Valores:* `start | end | left | right | center | justify | match-parent`
+```CSS
+p {
+	text-align: center;
+}
+```
+[developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+### Text-shadow
+Descrição
+**Text shadow** é a sombra aplicada a um texto  e permite múltiplos valores
+
+```CSS
+p {
+  text-shadow: 1px 1px 1px red,
+	             2px 2px 1px green; /* offset-x | offset-y | blur-radius | color */
+}
+```
+[developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
+### Shorthand
+Descrição
+Podemos usar o *shorthand font* para determinar os seguintes.
+ *valores:* `font-style, font-variant, font-weight, font-stretch, font-size, line-height e font-family`
+```CSS
+p {
+  font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+}
+```
