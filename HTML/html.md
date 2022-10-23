@@ -413,6 +413,7 @@ Se for um arquivo, pode ser adicionado com a tag `img`
  `<form> ` é um elemento que vai definir formulario. E é um container estilo  `<section> `  `<footer> `
 
 \- `form`
+
 Atributos básicos:\
 -> _Action_: para onde o formulário vai ser submetido, se vazio envia para a página onde estou\
 -> _Method_: método http para envio (GET, POST...)
@@ -420,49 +421,56 @@ Atributos básicos:\
 ```html
 <input action="login" method="post"></form>
 ```
-
- **Fieldset legend**
- **Label**
- **Button**
- **Datalist**
- **FTags de** 
-
-
+ **Fieldset legend**\
 Para deixar o formulário mais semântico, utilizar as tags `fieldset` e `legend`:
-
 Atributos:\
 -> _disabled_ desativa a entrada de dados.\
 -> _form=""_ referencia o ID de um form, caso a tag `fieldset` fora da tag `form`.\
 -> _name=""_ define o nome do grupo.
-
-Elemento `label`: serve para associar ou identificar uma ou mais tags de entrada de dados, utilizar o atributo _for=""_ para referenciar um ID de uma tag `input`.
-
-Elemento `button`: representa um botão e é utilizado para envia os dados de um formulário.
-
-Atributos:.\
--> _type=""_: pode ser submit, reset ou button\
--> _autofocus_: foco automático\
--> _disabled_: desativa o botão\
--> _name=""_: key para o conteúdo passado por _value_\
--> _value=""_: valor que será passado\
--> _form=""_: link com o ID de um form
-
 ```html
 <form action="">
   <fieldset name="inputs-contact">
     <legend>Contato</legend>
     <label for="">Nome</label>
     <input type="text" />
-    <button type="submit">Enviar</button>
   </fieldset>
 </form>
 ```
-
+ **Label**
+ Elemento `label`: serve para associar ou identificar uma ou mais tags de entrada de dados, utilizar o atributo _for=""_ para referenciar um ID de uma tag `input`.
+```html
+<form action="">
+  <fieldset name="inputs-contact">
+    <legend>Contato</legend>
+    <label for="">Nome</label>
+  </fieldset>
+</form>
+```
+ **Button**
+ Elemento `button`: representa um botão e é utilizado para envia os dados de um formulário.
+  Atributos:.\
+  -> _type=""_: pode ser submit, reset ou button\
+  -> _autofocus_: foco automático\
+  -> _disabled_: desativa o botão\
+  -> _name=""_: key para o conteúdo passado por _value_\
+  -> _value=""_: valor que será passado\
+  -> _form=""_: link com o ID de um form
+  
+  ```html
+  <form action="">
+    <fieldset name="inputs-contact">
+      <legend>Contato</legend>
+      <label for="">Nome</label>
+      <input type="text" />
+      <button type="submit">Enviar</button>
+    </fieldset>
+  </form>
+  ```
+ **Datalist**
 Elemento `datalist`: dropdown com uma lista de valores como sugestão a uma tag `input`, porém os valores são apenas sugestões, não são obrigatórios. O usuário pode digitar no campo. Cada opção da lista é dada por uma tag `option`.
 
 ```html
 <input type="text" list="fruitsdata" placeholder="Escolha uma fruta" />
-
 <datalist id="fruitsdata">
   <option>apple</option>
   <option>banana</option>
@@ -470,10 +478,11 @@ Elemento `datalist`: dropdown com uma lista de valores como sugestão a uma tag 
   <option>orange</option>
 </datalist>
 ```
+#### Tags de 
 
 **Tag `input`:**
 
-Atributos:
+Atributos:\
 
 -> _type=""_: text, date, number, file, email password...\
 -> _name=""_\
