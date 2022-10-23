@@ -408,10 +408,11 @@ Se for um arquivo, pode ser adicionado com a tag `img`
 **O que são forms**
  *form*  para que serve formulario: serve para capturar dados de entrada (input)/ou usuario.
  #### Estrutura
+
  **Form**
  `<form> ` é um elemento que vai definir formulario. E é um container estilo  `<section> `  `<footer> `
 
-\- `form`
+\- `form`\
 
 Atributos básicos:\
 -> _Action_: para onde o formulário vai ser submetido, se vazio envia para a página onde estou\
