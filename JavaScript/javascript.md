@@ -43,6 +43,42 @@ Nesta aula vamos entender melhor a sintaxe, que é o jeito de escrever código p
 console.log("Bem vindos ao Starter")
 ```
 
+Resumo
+Cobrimos 3 funções específicas do navegador para interagir com os visitantes:
+
+`alert`
+mostra uma mensagem.
+
+```js
+alert(`You are ${age} years old!`) // You are 100 years old!
+```
+
+`prompt`
+mostra uma mensagem pedindo ao usuário para inserir texto. Retorna o texto ou, se o botão Cancelar ou Escfor clicado, null.
+
+```js
+let age = prompt("How old are you?", 100)
+```
+
+`confirm`
+mostra uma mensagem e espera que o usuário pressione “OK” ou “Cancelar”. Retorna truepara OK e falsepara Cancel/ Esc.
+
+```js
+let isBoss = confirm("Are you the boss?")
+
+alert(isBoss) // true if OK is pressed
+```
+
+Todos esses métodos são modais: eles pausam a execução do script e não permitem que o visitante interaja com o restante da página até que a janela seja descartada.
+
+Existem duas limitações compartilhadas por todos os métodos acima:
+
+A localização exata da janela modal é determinada pelo navegador. Normalmente, fica no centro.
+A aparência exata da janela também depende do navegador. Não podemos modificá-lo.
+Esse é o preço da simplicidade. Existem outras maneiras de mostrar janelas mais agradáveis ​​e interação mais rica com o visitante, mas se “sinos e assobios” não importam muito, esses métodos funcionam bem.
+
+[alert-prompt-confirm](https://javascript.info/alert-prompt-confirm)
+
 **✔️Maneiras de executar o JavaScript**
 
 Nesta aula vamos citar 3 maneiras de executar códigos em JavaScript, a primeira maneira é pelo navegador, clicando na tecla F12 em qualquer website o menu do DevTools, que são ferramentas para desenvolvedores, na aba console podemos executar código JavaScript. A segunda forma é pela aplicação web CodePen, abrindo o endereço codepen.io/pen você encontra um ambiente que se pode utilizar codigo HTML, CSS e JavaScript. Também pode-se usar o Visual Studio Code, criando um arquivo HTML com a tag <script> e colocando o código dentro.
@@ -206,6 +242,100 @@ Nesse curso vamos aprender sobre JavaScript, entender os tipos de dados, variáv
 Descrição
 Para entender variáveis podemos pensar nelas como nomes simbólicos para algum valor, atalhos de código ou identificadores. Para criar uma variável, podemos usar uma das palavras reservadas: `var, let e const`, por exemplo: `var clima = "quente"`, onde `var` é a palavra que simboliza a criação da variável, clima é o nome da variável, o sinal de igual denota que a variável está recebendo um valor e "quente" é a string que está sendo recebida. As variáveis declaradas com "var" e "let" podem ter seu valor mudado, já a const não.
 
+**Variáveis**
+Na maioria das vezes, um aplicativo JavaScript precisa trabalhar com informações. Aqui estão dois exemplos:
+
+Uma loja online – as informações podem incluir mercadorias sendo vendidas e um carrinho de compras.
+Um aplicativo de bate-papo – as informações podem incluir usuários, mensagens e muito mais.
+Variáveis ​​são usadas para armazenar essas informações.
+
+Uma variável
+Uma variável é um “armazenamento nomeado” para dados. Podemos usar variáveis ​​para armazenar guloseimas, visitantes e outros dados.
+
+Para criar uma variável em JavaScript, use a palavra- `let` chave.
+
+A instrução abaixo cria (em outras palavras: declara ) uma variável com o nome “message”, em seguida Agora, podemos colocar alguns dados nele usando o operador de atribuição =:
+
+```js
+let message
+
+message = "Hello" // store the string 'Hello' in the variable named message
+```
+
+Para ser conciso, podemos combinar a declaração e a atribuição da variável em uma única linha:
+
+```js
+let message = "Hello!" // define the variable and assign the value
+
+alert(message) // Hello!
+```
+
+Também podemos declarar várias variáveis ​​em uma linha:
+
+```js
+let user = "John",
+  age = 25,
+  message = "Hello"
+```
+
+Isso pode parecer mais curto, mas não recomendamos. Para melhor legibilidade, use uma única linha por variável.
+
+A variante de várias linhas é um pouco mais longa, mas mais fácil de ler:
+
+```js
+let user = "John"
+let age = 25
+let message = "Hello"
+```
+
+_var_ ao invés de _let_
+Em scripts mais antigos, você também pode encontrar outra palavra-chave: _var_ em vez de _let_:
+
+```js
+var message = "Hello"
+```
+
+A varpalavra-chave é quase a mesma que let. Ele também declara uma variável, mas de uma maneira um pouco diferente, “old-school”.
+
+Existem diferenças sutis entre lete var, mas elas ainda não importam para nós. Vamos abordá-los em detalhes no capítulo _O velho "var"_.
+
+**Uma analogia da vida real**
+Podemos entender facilmente o conceito de “variável” se a imaginarmos como uma “caixa” de dados, com um adesivo com um nome exclusivo.
+
+Por exemplo, a variável messagepode ser imaginada como uma caixa rotulada "message"com o valor "Hello!"nela:
+
+Podemos colocar qualquer valor na caixa.
+
+Também podemos alterá-lo quantas vezes quisermos:
+
+```js
+let message
+
+message = "Hello!"
+
+message = "World!" // value changed
+
+alert(message)
+```
+
+Quando o valor é alterado, os dados antigos são removidos da variável:
+
+Também podemos declarar duas variáveis ​​e copiar dados de uma para a outra.
+
+```js
+let hello = "Hello world!"
+let message
+
+// copy 'Hello world' from hello into message
+message = hello
+
+// now two variables hold the same data
+alert(hello) // Hello world!
+alert(message) // Hello world
+```
+
+ou
+
 ```js
 //var clima = "quente"//muda o seu valor durante aplicação
 //let clima = "quente"//muda o seu valor durante aplicação
@@ -215,7 +345,49 @@ const clima = "quente" //não muda o seu valor durante aplicação
 console.log(clima)
 ```
 
+**Declarar duas vezes aciona um erro**
+Uma variável deve ser declarada apenas uma vez.
+Uma declaração repetida da mesma variável é um erro:
+
+```js
+let message = "This"
+
+// repeated 'let' leads to an error
+let message = "That" // SyntaxError: 'message' has already been declared
+```
+
+Portanto, devemos declarar uma variável uma vez e depois nos referir a ela sem let.
+<h>
+**Resumo**
+Podemos declarar variáveis ​​para armazenar dados usando as palavras-chave `var`, `let` ou `const`.
+
+`let`– é uma declaração de variável moderna.
+`var`– é uma declaração de variável antiga. Normalmente não o usamos, mas abordaremos diferenças sutis letno capítulo O antigo "`var`" , caso você precise deles.
+`const`– é como `let`, mas o valor da variável não pode ser alterado.
+As variáveis ​​devem ser nomeadas de uma forma que nos permita entender facilmente o que está dentro delas.
+
+**Tarefa**
+Trabalhando com variáveis
+
+1.Declare duas variáveis: admine name.
+2.Atribua o valor "John"a name.
+3.Copie o valor de namepara admin.
+4.Mostre o valor de adminusing alert(deve produzir "John").
+solução:
+
+```js
+//No código abaixo, cada linha corresponde ao item na lista de tarefas.
+let admin, name // can declare two variables at once
+name = "John"
+admin = name
+alert(admin) // "John"
+```
+
+[variavel](https://javascript.info/variables)
+
 **Tipos dinâmicos**
+Descrição
+O JavaScript é uma linguagem fracamente tipada e dinâmica, ou seja, ao declarar uma variável não é necessário estabelecer um tipo específico e o tipo do valor da variável pode mudar conforme o código.
 
 ```js
 
@@ -237,6 +409,55 @@ console.log(clima)
 
 ```js
 
+```
+
+Resumo
+Existem 8 tipos de dados básicos em JavaScript.
+
+Sete tipos de dados primitivos:
+`number` para números de qualquer tipo: inteiro ou ponto flutuante, os inteiros são limitados por .±(253-1)
+`bigint` para números inteiros de comprimento arbitrário.
+`string` para cordas. Uma string pode ter zero ou mais caracteres, não há um tipo de caractere único separado.
+`boolean` para true/ false.
+`null` para valores desconhecidos – um tipo autônomo que tem um único valor null.
+`undefined` para valores não atribuídos – um tipo autônomo que tem um único valor undefined.
+`symbol` para identificadores exclusivos.
+E um tipo de dados não primitivo:
+`object` para estruturas de dados mais complexas.
+O `typeofo` perador nos permite ver qual tipo está armazenado em uma variável.
+
+Geralmente usado como `typeof x`, mas `typeof(x)` também é possível.
+Retorna uma string com o nome do tipo, como "string".
+Para `null` retornos "object"– isso é um erro na linguagem, não é realmente um objeto.
+**Tarefas**
+Aspas de string
+
+Qual é a saída do script?
+
+```js
+let name = "Ilya"
+
+alert(`hello ${1}`) // ?
+
+alert(`hello ${"name"}`) // ?
+
+alert(`hello ${name}`) // ?
+```
+
+solucção
+
+```js
+//Backticks incorporam a expressão dentro ${...}da string.
+let name = "Ilya"
+
+// the expression is a number 1
+alert(`hello ${1}`) // hello 1
+
+// the expression is a string "name"
+alert(`hello ${"name"}`) // hello name
+
+// the expression is a variable, embed it
+alert(`hello ${name}`) // hello Ilya
 ```
 
 <hr>
@@ -262,21 +483,110 @@ console.log(clima)
 ```
 
 **Objects**
+Objects
+Descrição
+Para criarmos um objeto utilizamos as chaves envolvendo as propriedades, que são atribuídas com dois pontos, por exemplo: const person = { name: 'John', age: 20 }, para acessar essas propriedades usamos o ".", por exemplo: console.log(person.name).
 
 ```js
-
+const person = {
+  name: "John",
+  age: 30,
+  weight: 88.6,
+  isAdmin: true,
+}
+console.log(person)
+console.log(person.name)
+console.log(person.age)
+console.log(`${person.name} tem ${person.age} anos`)
 ```
 
 **Arrays**
+Arrays
+Descrição
+Para criarmos um vetor utilizamos [ ] envolvendo os valores, por exemplo: const animals = [ "Lion", "Monkey" ], para acessar esses valores usamos a posição do valor no vetor, começando por 0, por exemplo: console.log(animals[0]). Para descobrirmos o número de posições de um vetor qualquer, podemos utilizar a propriedade length, por exemplo: animals.length.
 
 ```js
+const animals = [
+  "Lion",
+  "Monkey",
+  {
+    name: "Cat",
+    age: 30,
+  },
+]
 
+//Como acessar valor de um array
+console.log(animals) //Lion, Monkey,Cat
+console.log(animals[2]) //cat
+console.log(animals.length) //3
+console.log(animals[2].name) //Cat
+console.log(`${animals[2].name} tem ${animals[2].age} anos`) //Cat tem 30 anos
 ```
 
 **Exercícios**
 
 ```js
+//1.Declara uma variavel de nome weight
+//let weight
+//2.Que tipo de dados é a variavel cima
+//console.log(typeof weight)
+/*
+          3.Declara uma variavel e atribua valores para um dos dados
+            * name: String
+            * age:number(integer)
+            * starts: Number(float)
+            * isSubcribed: Boolean
+        */
+//let name = "Issufi"
+//let age = 20
+//let starts = 2.3
+//let isSubcribed = true
 
+/*
+ *   4.A variável student abaixo é de que tipo de dados?
+ * 4.1 Atribua a ela as mesmas propriedades e valores do exercício 3.
+ * 4.2Mostre no console a seguinte mensagem:
+ * <name> de idade <age>pesa<weight>kg
+ * Atenção, substitua <name><age> e <weight>pelos valores de cada propriedade do objeto
+ */
+
+let student = {
+  name: "issufi",
+  age: 20,
+  weight: 17.5,
+}
+//console.log(`${student.name} tem ${student.age} anos e ${student.weight} kg`)
+
+/*
+5.Declara uma variavel do tipo arary, de nome students e atibua a ela nenhhum valor, ou seja, somente o rarry vazio
+*/
+
+//let students = []
+
+/* 
+6.Reatibua valor para a variavel acima, colocando dentro dela o objeto student da questão 4(Não copia e colocar o objet, mas usar o objeto criado e inserir ele no array)
+*/
+students = [student]
+
+//console.log(students)
+
+/*
+7.cologque no console o valor da posição zero array acima */
+//console.log(students[0])
+
+/*
+8.Crie um novo student e coloque na posição 1 do arry students
+*/
+const John = {
+  name: "Jhon",
+  age: 23,
+  weight: 45.5,
+  isSubscribe: true,
+}
+
+//students = [student, John]
+students[1] = John
+console.log(students)
 ```
 
 <hr>
