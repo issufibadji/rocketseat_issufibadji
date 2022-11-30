@@ -616,7 +616,7 @@ Number {0, constructor: ƒ, toExponential: ƒ, toFixed: ƒ, toPrecision: ƒ, �
 Type conversion se trata de uma conversão de tipo feita pelo dev, explicitamente, e pode ser feita de diversas maneiras, por exemplo com o método Number(), já type coersion é uma mudança de tipos feita pelo próprio JavaScript, implicitamente, por exemplo quando você tenta somar um número na forma string com um número do tipo número.
 
 ```js
-
+console.log(Number("9") + 5) //14
 ```
 
 **Strings em números**
@@ -624,83 +624,572 @@ Type conversion se trata de uma conversão de tipo feita pelo dev, explicitament
 É possível transformar números em formato de string através do método Number() e números em formato number em string usando o método String().
 
 ```js
+//transformação de string para number
+let string = "123"
+console.log(Number(string)) //123
 
+//transformação de number para
+let number = 321
+console.log(String(number)) //321
 ```
 
 **Contando caracteres e digitos**
 Para contar a quantidade de caracteres em uma string é possível usar o método length(), também é possível contar a quantidade de algarismos em um número transformando o número em string e usando o mesmo método.
 
 ```js
+let word = "issufibadji"
+console.log(word.length) //11
 
+let number = 123456
+console.log(String(number).length) //6
 ```
 
 **Casas decimais**
 Para determinar uma quantia de casas decimais de um número pode-se usar o método toFixed() colocando como argumento quantas casas decimais o número terá. Para mudar a formatação do número de separado por ponto para separado por vírgula é possível usar o método replace(".", ","). O resultado final será do tipo string, e a conversão para o tipo número não será possível por que a vírgula não é considerada parte de um número.
 
 ```js
+let number = 345.465827
+console.log(number.toFixed(2)) //234.47
 
+//trcar ponto por virgula
+let number = 345.465827
+console.log(number.toFixed(2).replace(".", ",")) //234,47
 ```
 
 **Maiúsculas e minúsculas**
 Para transformar uma string em letras maiúsculas pode-se usar o método toUpperCase(), e ao contrário, também é possível usar o toLowerCase() para transformar uma string em todas letras minúsculas.
 
 ```js
-
+let word = "Issufi Badji"
+console.log(word.toLowerCase())
+//
+let word = "Issufi Badji"
+console.log(word.toUpperCase())
 ```
 
 **Separando strings**
 Para separar um texto por espaços, pode-se usar o método split(" "), que transforma o texto em um array de strings baseado no argumento, que no caso são os espaços. Para juntar esse array é possível usar o método join('"), que juntaria essas palavras sem nenhum separador, porém colocando um argumento, no caso um underscore ( join("\_") ) as palavras são juntadas com o argumento de separador.
 
 ```js
+let phrase = "Te amo muito"
+let myArray = phrase.split(" ") //split("o")
+console.log(myArray) //(3) ['Te', 'amo', 'muito']
 
+///
+let phrase = "Te Amo muito"
+let myArray = phrase.split(" ") //split("o")
+//console.log(myArray) //(3) ['Te', 'amo', 'muito']
+
+let phraseWithUnderscore = myArray.join("_") //.join("")
+console.log(phraseWithUnderscore.toLowerCase()) // te_amo_muito
 ```
 
 **Encontrando palavras em frases**
 Para verificar se um texto possui uma palavra específica, podemos usar o método includes(), passando como argumento a palavra a ser verificada, que retorna um valor true se encontrar a palavra, e falso se não, lembrando sempre que o método é case sensitive.
 
+```js
+let phrase = "Te Amo muito"
+
+console.log(phrase.includes("Amo")) //true
+```
+
 **Criando array com construtor**
 Para criar um array com um método construtor, usa-se new Array(args), passando como argumento o tamanho deste vetor ou os valores, por exemplo: const array = new Array("a", "b", "c").
 
 ```js
-
+let myArray = new Array("a", "b", "c")
+console.log(myArray) //["a", "b", "c"]
 ```
 
 **Elementos do Array**
 Para contar a quantidade de elementos em um array pode-se usar o método length.
 
 ```js
-
+console.log(["a", "b", "c"].length) //3
 ```
 
 **Strings para arrays**
 Para transformar uma string em um array, pode-se usar o objeto Array com o método from(), passando como argumento a string a ser transformada em array. Por exemplo console.log(Array.from("developer").
 
 ```js
-
+let word = "manipulação"
+console.log(Array.from(word)) //
 ```
 
 **Manipulando arrays**
 Existem várias maneiras de manipular arrays, como: o método push(), que adiciona um elemento no final do array, o método unshift(), que adiciona um elemento no começo do array, o método pop(), que retira um elemento do final do array, o método shift(), que retira um elemento do começo do array, o método slice(), que recebe como argumentos a posição de início e a posição do fim da parte que você quer selecionar, e retorna os valores destas posições, o método splice(), que recebe como argumentos a posição de início e a quantidade de elementos que você quer remover e o método indexOff(), que encontra o index do valor que recebe como argumento em um array.
 
 ```js
-
+let tech = ["html", "css", "js"]
+// Adicionar um item no fim
+tech.push("node.js") //["html", "css", "j","node.js"]
+//Adcionar um item no começo
+tech.unshift("jQuery") //[,"jQuery","html", "css", "j","node.js"]
+//Reomover no inicio
+tech.shift() //["html", "css", "j","node.js"]
+//Reomover no fim
+tech.pop() //["html", "css", "j"]
+//pegar somente alguns elementos do array
+console.log(tech.slice(1, 2)) //['css]
+//remover 1 ou mais items em qualquer posição do Array
+tech.splice(1, 2) //['html']
+//encontrar a posição de um elemento no
+let index = tech.indexOf("html")
+console.log(index)
+//
+console.log(tech)
 ```
 
 <hr>
 
 ### **8.❌Expressões e Operadores**
 
-```js
+**Expressões e operadores**
+Nas próximas aulas, falaremos sobre expressões e operadores.
 
+Expresssões são bem tranquilas, porque expressões são qualquer linha de código que resolve alguma coisa no JavaScript, um exemplo é a expressão:
+
+```js
+let number
 ```
+
+Isso é uma expressão, já que estamos declarando uma váriavel, nesse caso com o valor de undefined.
+
+Toda expressão do Javascript pode ou não terminar com ; (ponto e vírgula), o final de uma expressão é facultativa, mas em algumas outras linguagens é obrigatório o uso de ; (ponto e vírgula).
+
+Em alguns casos é necessário o uso de ; (ponto e vírgula), como numa função auto-executável, é um dos poucos casos onde faz falta, e é em um cenário como o seguinte:
+
+```js
+let number = 1(function () {
+  console.log("alo")
+})()
+```
+
+Caso você tente executar esse código, ele vai tentar atribuir essa função ao valor 1, onde o Javascript vai tentar executar o 1, passar uma função como argumento, e o 1 vai receber uma outra função. Um dos pouquíssimos casos onde o ; (ponto e vírgula) faz falta.
+
+Veremos também sobre operadores, nesse exemplo temos o binário, unário e ternário.
+
+```js
+/* unário */
+let number = 1
+
+console.log(++number)
+```
+
+```js
+/* binário */
+let number = 1
+
+console.log(number + 1)
+```
+
+```js
+/* ternário */
+console.log(true ? "alo" : "nada")
+```
+
+Como você pode observar, temos no unário um elemento, no binário dois elementos e no ternário três elementos.
+
+**New**
+A expressão new, também denominada como left-hand-side expression, serve para criar um novo objeto usando as funções construtoras que temos por padrão no JavaScript.
+
+Um exemplo de seu uso é:
+
+```js
+let date = new Date('2020-12-01')
+console.log(date.**proto**)
+```
+
+**Typeof delete**
+Em operadores unários, os mais comuns são o typeof e o delete, onde o typeof serve para saber o tipo de dado que temos na expressão, e o delete vai deletar alguma propriedade de um objeto, desde que ela exista.
+
+Exemplos de uso:
+
+```js
+;/_ delete _/
+const person = {
+  name: "Mayk",
+  age: 25,
+}
+delete person.age
+
+console.log(person)
+```
+
+Nesse caso estamos deletando a propriedade age do objeto person.
+
+console.log(tyepof "mayk")
+Aqui vemos qual o tipo de dado que temos, nesse caso uma string.
+
+**Operadores aritméticos**
+Falaremos nessa aula sobre operadores aritméticos, que nos possibilitam fazer cálculos matemáticos.
+
+O operador de multiplicação é o \* (asterisco);
+
+O operador de divisão é a / (barra);
+
+O operador de soma é o + (positivo);
+
+O operador de subtração é o - (negativo).
+
+Outros operadores aritméticos incluem o resto de divisão, incremento, decremento e exponencial, com exemplos a seguir:
+
+/_ resto da divisão: sinal % _/
+
+```js
+let remainder
+remainder = 11 % 9
+console.log(remainder)
+```
+
+/_ incremento: sinal ++ _/
+
+```js
+let increment = 0
+
+console.log(++increment)
+console.log(increment)
+```
+
+/_ decremento: sinal -- _/
+
+```js
+let decrement = 0
+decrement--
+console.log(decrement)
+```
+
+/_ exponencial: sinal \*\* _/
+
+```js
+console.log(2 \*\* 3)
+```
+
+**Grouping operator**
+Vamos falar sobre um operador que agrupa expressões, os parênteses.
+
+Na matemática, temos uma noção de precedência, onde certos operadores têm de ser realizados primeiro, e não é diferente para um computador, porém, podemos utilizar os parênteses para realizar o agrupamento de alguns operadores, que moverá a precedência do cálculo.
+
+```js
+let total = 2 + 3 \* 5
+console.log(total)
+
+//com essa precedência, nosso resultado é 17.
+```
+
+```js
+let total = (2 + 3) \* 5
+console.log(total)
+// o cálculo mudou a precedência, fazendo nosso resultado tornar-se 25.
+```
+
+**Operadores de comparação igual a e diferente de**
+02:01
+
+**Operadores de comparação estritamente igual e estritamente diferente**
+02:09
+
+**Operadores de comparação maior e menor (igual)**
+01:25
+
+**Operadores de atribuição**
+02:25
+
+**Operadores lógicos**
+03:48
+
+**Operador condicional ternário**
+Os operadores ternários, conhecidos como operadores de condição, como o nome sugere, são dependentes de condições e podem entregar valores diferentes com base nelas.
+
+Funciona da seguinte forma;
+
+condição ? valor1 : valor2
+
+Exemplo de uso:
+
+```js
+// Café da manhã top
+let pao = false
+let queijo = false
+
+const niceBreakfast = pao || queijo ? "Café top" : "Café ruim"
+
+console.log(niceBreakfast)
+```
+
+**Operadores para string**
+Temos também os string operators, os operadores de string, e nós até já vimos um desses antes, o comparison operator, ou ==, para os mais íntimos.
+
+Agora vamos ver sobre a concatenação, que é o retorno da união de duas strings.
+
+Seu símbolo é o de + (positivo), e seu uso é simples, algo próximo de:
+
+```js
+console.log("a" + "a")
+// nesse caso, o retorno da string seria aa.
+```
+
+**Falsy e truthy**
+O falsy é quando um valor é considerado falso em contextos que onde um booleano é obrigatório (condicionais e loops), exemplo a seguir:
+
+/\_
+Todos os valores abaixo seriam representados como false em um boolean.
+
+```js
+false
+0 - 0
+;("")
+null
+undefined
+NaN
+_ / console.log(NaN ? "verdadeiro" : "falso")
+```
+
+já o truthy é o oposto, quando um valor é considerado verdadeiro (true) em contextos onde um booleano é obrigatório (condicionais e loops), exemplo a seguir:
+
+```js
+/_
+Todos os valores abaixo seriam representados como false em um boolean.
+true
+{}
+[]
+1
+3.23
+"0"
+"false"
+-1
+Infinity
+-Infinity
+_/
+```
+
+console.log( Infinity ? 'verdadeiro' : 'falso' )
+
+**Precedência dos operadores**
+Nesta aula mostraremos a precedência dos operadores, ou seja, a ordem de importância de cada um deles.
+
+// De cima para baixo, do mais importante ao menos importante.
+
+- grouping ( )
+- negação e incremento ! ++ --
+- multiplicação e divisão \* /
+- adição e subtração + -
+- relacional < <= > >=
+- igualdade == != === !==
+- AND &&
+- OR ||
+- condicional ?:
+- assignment (atribuição) = += -= \*= %=
 
 <hr>
 
 ### **9.❌Condicionais e controle de fluxo**
 
+**Controle de fluxo da aplicação**
+Nas próximas aulas falaremos sobre o controle de fluxo de nossa aplicação. O fluxo padrão vai linha a linha executando todas as linhas, mas nós podemos alterar isso com o que vamos aprender neste módulo.
+
+**If e Else**
+Vamos falar sobre o if e o else, que ajudam nossa aplicação a tomar diferentes caminhos, ou seja, alteram o fluxo da nossa aplicação.
+
+Sua sintaxe é simples, como pode ver a seguir:
+
+```js
+if (condição) {
+  //apenas será executado o bloco de código caso condição seja true
+} else {
+  // apenas será executado o bloco de código caso condição do if seja false
+}
+```
+
+O exemplo utilizado pelo professor no vídeo é o seguinte, acompanhe para poder visualizar o processo até chegarmos nesse código.
+
+```js
+let temperature = 36.9
+let highTemperature = temperature >= 37.5
+let mediumTemperature = temperature < 37.5 && temperature >= 37
+
+if (highTemperature) {
+  console.log("Febre alta")
+} else if (mediumTemperature) {
+  console.log("Febre moderada")
+} else {
+  console.log("Saudável")
+}
+```
+
+**Switch**
+Vamos usar uma declaração chamada switch, que tem um papel muito similar ao if e ao else if, vistos na aula passada, porém a estrutura é bem diferente, e aqui veremos essa estrutura.
+
+```js
+let expression = ""
+
+switch (
+  expression // puxa a expressão para o switch
+) {
+  case "a": // confere se o valor da expressão é o correto
+    console.log("a")
+    break // para a execução do switch apenas se verdadeiro
+  case "b":
+    console.log("b")
+    break
+  default: // caso nenhum valor seja o correto, realizará a
+    //instrução dentro de si.
+    console.log("default")
+    break
+}
+```
+
+Temos também a calculadora que o professor construiu no vídeo:
+
+```js
+function calculate(number1, operator, number2) {
+  let result = 0
+
+  switch (operator) {
+    case "+":
+      result = number1 + number2
+      break
+    case "-":
+      result = number1 - number2
+      break
+    case "*":
+      result = number1 * number2
+      break
+    case "/":
+      result = number1 / number2
+      break
+    default:
+      console.log("não implementado")
+      break
+  }
+
+  return result
+}
+
+console.log(calculate(4, "%", 8)) //+,-,*,/
+```
+
+**Throw e Try/Catch**
+Nesta aula veremos sobre o throw e try/catch. São parte do controle de fluxo da aplicação.
+
+Throw em inglês significa lançar, disparar, catch quer dizer pegar e try tentar.
+
+Isso significa que vamos tentar executar um bloco de código, e se der algum erro, será disparado e capturado na nossa aplicação. Suponhamos que haja uma função que dispare um erro caso não seja passado um parâmetro dessa função.
+
+```js
+function sayMyName(name = "") {
+  if (name === "") {
+    throw "Nome é obrigatório"
+  }
+
+  console.log(name)
+}
+```
+
+Nesse caso, se o nome vier vazio, será disparada uma mensagem.
+
+Precisamos agora usar o try/catch para capturarmos esse erro, caso contrário, ele irá encerrar nossa aplicação, e nós o faremos da seguinte maneira:
+
+```js
+try {
+  sayMyName()
+} catch (e) {
+  console.log(e)
+}
+
+console.log("após ao try/catch")
+```
+
+O try irá executar a função, enquanto o catch vai capturar o erro e atribuir à variável e, que só existe dentro do catch. Após isso, mesmo com o erro, nossa aplicação não será interrompida por completo.
+
 <hr>
 
 ### **10.❌Estruturas de repetição**
+
+**For**
+A estrutura de repetição for tem a seguinte sintaxe:
+
+for(inicialização de uma variável; condição de continuação para o loop; expressão final)
+
+```js
+for (let i = 0; i < 3; i++) {
+  // shows 0, then 1, then 2
+  alert(i)
+}
+```
+
+**While**
+Enquanto o conditioné verdadeiro, o codedo corpo do loop é executado.
+
+Por exemplo, o loop abaixo gera iwhile i < 3:
+
+```js
+let i = 0
+while (i < 3) {
+  // shows 0, then 1, then 2
+  alert(i)
+  i++
+}
+```
+
+O loop primeiro executará o corpo, depois verificará a condição e, embora seja verdadeiro, execute-o novamente e novamente.
+
+Por exemplo:
+
+```js
+let i = 0
+do {
+  alert(i)
+  i++
+} while (i < 3)
+```
+
+Essa forma de sintaxe só deve ser usada quando você deseja que o corpo do loop seja executado pelo menos uma vez, independentemente de a condição ser verdadeira. Normalmente, a outra forma é preferida: while(…) {…}.
+**For of**
+
+```js
+let name = "Issufi"
+let names = ["Do", "João", "Mária"]
+
+for (let char of name) {
+  console.log(char) //I s s u f i//vai imprimir cada carater de name issufi
+}
+```
+
+```js
+let name = "Issufi"
+let names = ["Do", "João", "Mária"]
+
+for (let name of names) {
+  console.log(name) //Do Joâo Mária//vai atribuir names no name
+}
+```
+
+**For in**
+
+```js
+let person = {
+  name: "John",
+  age: 30,
+  weight: 78.9,
+}
+for (let property in person) {
+  console.log(property) //name,age etc.
+  console.log(person[property]) //name:john, age:30, weigth:78.9
+}
+```
+
+**Resumo**
+Cobrimos 3 tipos de loops:
+
+while– A condição é verificada antes de cada iteração.
+do..while– A condição é verificada após cada iteração.
+for (;;)– A condição é verificada antes de cada iteração, configurações adicionais disponíveis.
+Para fazer um loop “infinito”, geralmente a while(true)construção é usada. Esse loop, como qualquer outro, pode ser interrompido com a breakdiretiva.
+
+Se não quisermos fazer nada na iteração atual e quisermos passar para a próxima, podemos usar a continuediretiva.
+
+break/continuerótulos de suporte antes do loop. Um rótulo é a única maneira de break/continueescapar de um loop aninhado para ir para um externo.
 
 <hr>
 
