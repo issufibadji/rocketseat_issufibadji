@@ -1201,13 +1201,80 @@ break/continuerótulos de suporte antes do loop. Um rótulo é a única maneira 
 
 ### **Introdução**
 
+O que é e para que serve a DOM
+
+Representação visual
+
 <hr>
 
 ### **Selecionando elementos**
 
+**getElementById**
+
+```js
+//console.log(document.getElementById("title"))
+
+const element = document.getElementById("title")
+console.log(element)
+```
+
+**getElementsByClassName**
+
+```js
+const element = document.getElementsByClassName("subtitle")
+console.log(element)
+```
+
+**getElementsByTagName**
+
+```js
+const element = document.getElementsByTagName("h1")
+console.log(element)
+```
+
+**querySelector**
+
+```js
+const element = document.querySelector(".css") //css,tag html,src ect.
+console.log(element)
+```
+
+**querySelectorAll**
+
+```js
+const element = document.querySelectorAll("[src]") //tds que tem atributo src.
+console.log(element)
+```
+
+```js
+const elements = document.querySelectorAll(".subtitle") //tds que tem atributo src.
+
+elements.forEach((el) => console.log(el)) //é usado só querySelectorAll
+```
+
+**Qual usar?**
+
+```js
+//getElementById(retorna element)
+//getElementsByClassName(retorna HTMLCollection )
+//getElementsByTagName(retorna HTMLCollection )
+//querySelector(retorna element )
+//querySelectorAll(retorna Nodelist)//forEach
+```
+
 <hr>
 
 ### **Manipulando conteúdos**
+
+textContent
+
+innerText
+
+innerHTML
+
+Value
+
+Manipulando atributos
 
 <hr>
 
