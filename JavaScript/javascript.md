@@ -1515,6 +1515,11 @@ console.log(titleElement2) // Retorna a mesma coisa que titleElement
 
 const textElements2 = document.querySelectorAll(".text")
 console.log(textElements2) // Retorna uma lista semelhante a textElements, porém Node List
+
+// Node List possui o método "forEach()"
+// Referências sobre a diferença entre HTML Collection e Node List:
+// https://medium.com/@layne_celeste/htmlcollection-vs-nodelist-4b83e3a4fb4b
+// https://dev.to/jharteaga/difference-between-htmlcollection-and-nodelist-25bp
 ```
 
 [HTMLCollection](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection)
@@ -1525,37 +1530,525 @@ console.log(textElements2) // Retorna uma lista semelhante a textElements, poré
 
 ### **Manipulando conteúdos**
 
-textContent
+- `textContent`: Recebe texto simples, retorna todo o texto que a tag contém, mesmo que algo esteja sendo escondido da visualização por meio de CSS, porém sem as tags.
 
-innerText
+```js
+const titleElement = document.getElementsByClassName("text")
+titleElement.textContent = "New title" // Modifica o conteúdo de texto
+console.log(titleElement.textContent) // Também retorna o texto
+titleElement.textContent += " - Updates Concatenados" // Usar += para concatenar
+```
 
-innerHTML
+- `innerText`: Recebe texto simples, retorna somente o texto visível que a tag contém.
 
-Value
+```js
+textElements[0].innerText = "<b>Lorem ipsum dolor sit amet<b>" // Não aplica o negrito, mostra como texto puro
+//ou
+const titleElement = document.querySelector("h1")
+titleElement.innerText = "Olá Devs" //Modifica elemento interno de texto
+```
 
-Manipulando atributos
+- `innerHTML`: Recebe html e interpreta, retorna o conteúdo total, incluindo as tags.
+
+```js
+textElements[1].innerHTML = "<b>Lorem ipsum dolor sit amet<b>" // Aplica negrito ao texto
+//
+const titleElement = document.querySelector("h1")
+titleElement.innerHTML = "Olá Devs <h2> Subtitle </h2>" //Adciona HTML no meu conteudo
+```
+
+- `value`: Altera o atributo "value"
+
+```html
+<input value="valor1" />
+```
+
+```js
+const inputElement = document.querySelector("input")
+console.log(inputElement)
+inputElement.value = "valor2" // Atribui e retorna o valor
+```
+
+- Outros atributos:
+  - `setAttribute(<"attr">, <"value">)`
+  - `getAttribute(<"attr">)`
+  - `removeAttribute(<"attr">)`
+
+```html
+<h1 id="blog-title">Content Title</h1>
+```
+
+```js
+titleElement.setAttribute("class", "title")
+console.log(titleElement) // Classe "title" adicionada
+console.log(titleElement.getAttribute("class")) // Retorna "title"
+titleElement.setAttribute("anyAttr", "value") // Add atributo personalizado
+titleElement.removeAttribute("anyAttr") // Remove atributo
+
+//ou
+const header = document.querySelector("header")
+header.setAttribute("id", "header")
+
+const headerID = document.querySelector("#header") //add atributo id no header
+console.log(headerID)
+console.log(headerID.getAttribute("id")) //pegar atributo id
+
+header.removeAttribute("id") //remover
+header.setAttribute("class", "bg header") //add class
+```
+
+<br>
 
 <hr>
 
 ### **Manipulando estilos e classes**
 
+- Propriedade `.style`: permite adicionar CSS inline. As propriedades CSS devem ser escritas em camelCase, não kebab-case.
+
+```js
+const titleElement = document.querySelector("body")
+titleElement.style.backgroundColor = "blue" // não background-color
+titleElement.style.color = "white"
+```
+
+- Propriedade `.classList`: retorna um DOMTokenList, que é uma lista de classes e possui diversos métodos, os mais utilizados sendo:
+
+```js
+console.log(titleElement.classList) // Retorna um DOMTokenList de tamanho 1, com '0: "title"'
+titleElement.classList.add("green")
+console.log(titleElement.classList) // Retorna um DOMTokenList de tamanho 2, com '0: "title"' e '1: "green"'
+titleElement.classList.remove("green")
+console.log(titleElement.classList) // Retorna um DOMTokenList de tamanho 1, com '0: "title"'
+titleElement.classList.toggle("red") // Se existe, remove. Se não existe, adiciona.
+console.log(titleElement.classList) // Retorna um DOMTokenList de tamanho 2, com '0: "title"' e '1: "red"'
+```
+
 <hr>
 
 ### **Navegando pelos elementos**
+
+```html
+<div id="div">
+  Texto puro 1
+  <span id="child1">Filho 1</span>
+  Texto puro 2
+  <span id="child2">Filho 2</span>
+  Texto puro 3
+  <span id="child3">Filho 3</span>
+  Texto puro 4
+</div>
+```
+
+```js
+const divElement = document.querySelector("#div")
+console.log(divElement)
+
+/* PAI: parentNode ou parentElement */
+console.log(divElement.parentNode) // Retorna o pai (Node): body
+console.log(divElement.parentElement) // Retorna o pai (Element): body
+
+/* FILHOS: childNodes, firstChild e lastChild ou children, firstElementChild e lastElementChild */
+console.log(divElement.childNodes) // Retorna uma NodeList com os filhos: tamanho 7 com texts (4) e tags span (3):
+// NodeList(7) [text, span, text, span, text, span, text] (antes de colocar os ids nos spans)
+// Se houver espaços/quebras de linha/textos, serão considerados "text" na lista de filhos
+
+console.log(divElement.children) // Retorna uma HTMLCollection com os filhos
+// Ignora os espaços/quebras de linha/textos puros: tamanho 3 com apenas tags span (3):
+// HTMLCollection(3) [span, span, span] (antes de colocar os ids nos spans)
+
+// Primeiro filho:
+console.log(divElement.firstChild) // Retorna o primeiro filho (Node): texto " Texto puro 1 " com as quebras de linha
+console.log(divElement.firstElementChild) // Retorna o primeiro filho (Element): tag span <span>Filho 1</span>
+
+// Último filho:
+console.log(divElement.lastChild) // Retorna o primeiro filho (Node): texto " Texto puro 4 " com as quebras de linha
+console.log(divElement.lastElementChild) // Retorna o primeiro filho (Element): tag span <span>Filho 3</span>
+
+/* IRMÃOS: nextSibling e previousSibling ou nextElementSibling e previousElementSibling */
+const child2 = document.querySelector("#child2")
+console.log(child2)
+
+// Irmão anterior
+console.log(child2.nextSibling) // (Node): texto " Texto puro 3 " com as quebras de linha
+console.log(child2.nextElementSibling) // (Element): tag span <span>Filho 3</span>
+
+// Irmão posterior
+console.log(child2.previousSibling) // (Node): texto " Texto puro 2 " com as quebras de linha
+console.log(child2.previousElementSibling) // (Element): tag span <span>Filho 1</span>
+```
+
+<br>
 
 <hr>
 
 ### **Criando e adicionando elementos na página**
 
+```js
+// Criar um novo elemento
+const newDiv1 = document.createElement("div")
+newDiv1.style.backgroundColor = "gray"
+newDiv1.innerHTML =
+  '<br><span style="background-color: yellow">Texto na nova div1</span>'
+```
+
+```js
+const newDiv2 = document.createElement("div")
+newDiv2.style.backgroundColor = "yellow"
+newDiv2.innerHTML =
+  '<br><span style="background-color: gray">Texto na nova div2</span>'
+```
+
+```js
+const newDiv3 = document.createElement("div")
+newDiv3.style.backgroundColor = "red"
+newDiv3.innerHTML =
+  '<br><span style="background-color: white">Texto na nova div3</span>'
+```
+
+```js
+const newDiv4 = document.createElement("div")
+newDiv4.style.backgroundColor = "green"
+newDiv4.innerHTML =
+  '<br><span style="background-color: white">Texto na nova div4</span>'
+```
+
+```js
+const body = document.querySelector("body")
+
+// Adicionar como primeiro filho
+body.prepend(newDiv1) // Adiciona "newDiv1" como o primeiro filho de "body"
+
+// Adicionar como último elemento
+body.append(newDiv2) // Adiciona "newDiv1" como o último filho de "body"
+
+// Adicionar antes de uma tag específica
+const script = body.querySelector("script") // Pega a tag script de dentro do body, será a referência
+console.log(script)
+body.insertBefore(newDiv3, script)
+
+// Não existe "insertAfter", mas para inserir após uma tag especifica, pode-se fazer:
+body.insertBefore(newDiv4, inputElement.nextSibling) // Insere após o elemento de input
+```
+
+<br>
+
+## Eventos
+
+Eventos podem ser adicionados "inline" na tag como um atributo. Os nomes começam com "on...", por exemplo: `onclick`, `ondblclick`, etc.
+Para um evento, deve ser passada uma função que será executada.
+
+```html
+<h2 onclick="print()">Click here to print!</h2>
+```
+
+```js
+function print() {
+  console.log("Print!!")
+}
+```
+
+Também é possível adicionar os eventos diretamente por JS:
+
+```html
+<input value="valor1" />
+```
+
+```js
+const input = document.querySelector("input")
+
+function print() {
+  console.log("Print!!")
+}
+
+input.onkeypress = print // Aqui deve ser passado apenas o nome da função, como uma variável
+
+// É possível definir a função diretamente:
+input.onfocus = function () {
+  console.log("Recebendo input...")
+}
+
+// Adicionar evento com addEventListener passando o evento e a função:
+input.addEventListener("blur", function () {
+  console.log("Parei de receber input.")
+})
+// Obs: os nomes de eventos quando passados para o EventListener não têm o 'on' no início.
+// Obs2: É mais recomendável passar eventos utilizando addEventListener pois isso evita que algum evento seja sobrescrito, com addEventListener é possível que com um único evento de click, por exemplo, várias funções sejam executadas.
+
+// As funções passadas para eventos podem receber, entre outros, o parâmetro 'event', que contém diversas informações sobre o evento, como a posição do mouse em um click, uma tecla pressionada, etc:
+
+const h2Element = document.querySelector("h2")
+
+h2Element.addEventListener("dblclick", (event) => {
+  console.log(event)
+})
+```
+
+<br>
 <hr>
 
 ### **Eventos**
+
+Eventos podem ser adicionados "inline" na tag como um atributo. Os nomes começam com "on...", por exemplo: `onclick`, `ondblclick`, etc.
+Para um evento, deve ser passada uma função que será executada.
+
+```html
+<h2 onclick="print()">Click here to print!</h2>
+```
+
+```js
+function print() {
+  console.log("Print!!")
+}
+```
+
+Também é possível adicionar os eventos diretamente por JS:
+
+```html
+<input value="valor1" />
+```
+
+```js
+const input = document.querySelector("input")
+
+function print() {
+  console.log("Print!!")
+}
+
+input.onkeypress = print // Aqui deve ser passado apenas o nome da função, como uma variável
+
+// É possível definir a função diretamente:
+input.onfocus = function () {
+  console.log("Recebendo input...")
+}
+
+// Adicionar evento com addEventListener passando o evento e a função:
+input.addEventListener("blur", function () {
+  console.log("Parei de receber input.")
+})
+// Obs: os nomes de eventos quando passados para o EventListener não têm o 'on' no início.
+// Obs2: É mais recomendável passar eventos utilizando addEventListener pois isso evita que algum evento seja sobrescrito, com addEventListener é possível que com um único evento de click, por exemplo, várias funções sejam executadas.
+
+// As funções passadas para eventos podem receber, entre outros, o parâmetro 'event', que contém diversas informações sobre o evento, como a posição do mouse em um click, uma tecla pressionada, etc:
+
+const h2Element = document.querySelector("h2")
+
+h2Element.addEventListener("dblclick", (event) => {
+  console.log(event)
+})
+```
+
+<br>
 
 <hr>
 
 ### **Praticando**
 
 <hr>
+
+[DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+
+# Trilha Especializar
+
+## **<font color=green> Javascript Assíncrono</font>**
+
+### Introdução
+
+<hr>
+
+### Síncrono vs Assíncrono
+
+<hr>
+
+### Callback Conceito
+
+<hr>
+
+### setTimeout
+
+<hr>
+
+### Conectando API com HTTPS e Callback
+
+<hr>
+
+### Promise Intro
+
+<hr>
+
+### O que é uma Promise
+
+<hr>
+
+### Promises
+
+Uma Promise pode ter 4 estados:
+
+- `pending`: estado inicial, quando é criado
+- `fulfilled`: promessa concluída com sucesso
+- `rejected`: promessa rejeitada, erro
+- `settled`: promessa concluída, não importa se com sucesso ou erro
+
+Por exemplo, pedindo um uber:
+
+```js
+let driverAccepts = true
+
+console.log("Pedir Uber")
+
+const promise = new Promise((resolve, reject) => {
+  return driverAccepts ? resolve("Carro chegou!") : reject("Pedido Negado")
+})
+
+promise
+  .then((result) => console.log(result))
+  .catch((error) => console.log(error))
+  .finally(() => console.log("Operação Finalizada"))
+
+console.log("Aguardando...")
+```
+
+### Promises com Fetch (browser)
+
+É possível encadear promises.
+
+Por exemplo, para pegar os repos de um user do github:
+
+```js
+fetch("https://api.github.com/users/vitorhonna")
+  .then((response) => response.json())
+  .then((data) => fetch(data.repos_url))
+  .then((r) => r.json())
+  .then((d) => console.log(d))
+  .catch((error) => console.log(error))
+```
+
+### Fetch no node
+
+Instalar:
+`npm install node-fetch`
+
+Importar:
+`import fetch from 'node-fetch'`
+
+### Promises com Axios (node)
+
+Instalar Axios:
+`npm install axios`
+
+Setar tipo como módulo no package.json:
+`"type": "module"`
+
+```js
+import axios from "axios"
+
+axios
+  .get("https://api.github.com/users/vitorhonna")
+  .then((response) => axios.get(response.data.repos_url))
+  .then((repos) => console.log(repos.data))
+  .catch((error) => console.log(error))
+```
+
+### Promessas em paralelo: `Promise.all([<array de promises])`
+
+Recebe um array de promises e retorna um array de responses:
+
+```js
+import axios from "axios"
+
+Promise.all([
+  axios.get("https://api.github.com/users/vitorhonna"),
+  axios.get("https://api.github.com/users/vitorhonna/repos"),
+])
+  .then((responses) => {
+    console.log(responses[0].data.login)
+    console.log(responses[1].data.length)
+  })
+  .catch((error) => console.error(error.message))
+```
+
+### Async / Await
+
+É uma maneira de se escrever promises (syntactic sugar).
+
+No exemplo do uber (acima):
+
+```js
+let driverAccepts = true
+
+console.log("Pedir Uber")
+
+const promise = new Promise((resolve, reject) => {
+  return driverAccepts ? resolve("Carro chegou!") : reject("Pedido Negado")
+})
+
+async function start() {
+  try {
+    const result = await promise
+    console.log(result)
+  } catch (error) {
+    console.log(error)
+  } finally {
+    console.log("Operação Finalizada")
+  }
+}
+
+start()
+
+console.log("Aguardando...")
+```
+
+### Async / Await com Fetch
+
+No exemplo dos repos do github:
+
+```js
+import fetch from "node-fetch"
+
+async function start() {
+  try {
+    const response = await fetch("https://api.github.com/users/vitorhonna")
+    const user = await response.json()
+    const reposResponse = await fetch(user.repos_url)
+    const repos = await reposResponse.json()
+    console.log(repos)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+start()
+```
+
+Funções assíncronas retornas promises, então é possível mesclar as sintaxes para fazer um código mais enxuto:
+
+```js
+import fetch from "node-fetch"
+
+async function start() {
+  const user = await fetch("https://api.github.com/users/vitorhonna").then(
+    (r) => r.json()
+  )
+  const repos = await fetch(user.repos_url).then((r) => r.json())
+  console.log(repos)
+}
+
+start().catch((error) => console.log(error))
+```
+
+### Async / Await com Axios
+
+```js
+import axios from "axios"
+
+async function getRepos() {
+  const user = await axios.get("https://api.github.com/users/vitorhonna")
+  const reposResponse = await axios.get(user.data.repos_url)
+  const repos = reposResponse.data
+  console.log(repos)
+}
+
+getRepos().catch((error) => console.error(error))
+```
 
 ## **<font color=green> Javascript Assíncrono</font>**
 
