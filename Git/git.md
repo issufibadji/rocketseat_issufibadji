@@ -10,7 +10,51 @@ Ele vai duplicar (clonar) localmente o repositório completo, e se qualquer serv
 
 Também pode controlar o fluxo de novas funcionalidades, através das ramificações (branch), que funcionam como universos paralelos, onde além do projeto principal, você pode criar uma linha alternativa, adicionar pontos na mesma e depois uni-la novamente à linha principal, sem falar na possibilidade de poder trabalhar com vários devs ao mesmo tempo, analisando e resolvendo conflitos, porém nesse curso não falaremos sobre essas ramificações, teremos mais foco em nossos próprios projetos, as ramificações ficarão para outro curso.
 
+# Instalando git no Mac
+
+Descrição
+Caso não tenha o git instalado na sua maquina, acesse https://git-scm.com/ e siga as instruções.
+
+Copie e cole no seu terminal o seguinte comando:
+
+`sudo apt-get install git`
+
+Para checar a instalação, digite no seu terminal:
+
+`git --version`
+Se aparecer a versão do git, ele foi instalado com êxito.
+
+# Configuração inicial
+
+Primeiramente, abra o seu terminal e digite:
+
+`git config --global user.name "Seu nome completo entre aspas"`
+`git config --global user.email seuemailaqui@dominio.com`
+
+Isso é importante porque em cada commit essa informação será utilizada, e é carimbada de forma imutável nos commits que você começa a criar.
+
+Caso você queira substituir essa informação para um projeto específico, apenas rode o comando sem a opção --global dentro daquele projeto.
+
+Caso queira trocar o editor padrão, que é o vim, pelo VS Code, rode o comando abaixo:
+
+`git config --global core.editor "code -w"`
+Por fim, caso queira verificar as suas configurações, apenas rode o comando abaixo:
+
+`git config --list`
+
 # Resumo GIT
+
+- `sudo apt-get install git` : instalar git
+
+- `git --version`: Ver version
+
+- `git config --global user.name "Seu nome completo entre aspas"`: configuração do nome de usuário
+
+- `git config --global user.email seuemailaqui@dominio.com`:configuração do email do usuário
+
+- `git config --global core.editor "code -w"`: configuração de editor
+
+- `git config --list`:listar configuração
 
 - `&&` : encadear comandos, ex: `git add . && git commit -m "msg"`
 
