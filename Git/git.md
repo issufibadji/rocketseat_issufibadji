@@ -96,6 +96,17 @@ Por fim, caso queira verificar as suas configurações, apenas rode o comando ab
 
 - `git show <commit code>` : mostra as modificações inseridas por um commit, usar `--color-words` para destacar palavras alteradas
 
+- `git help` : ajuda
+- `q` : sair
+- `ls -a` : ver diretorio git
+- `ls -al .git` :Verá que há alguns arquivos nessa pasta, e são exatamente esses arquivos que nos trazem as informações do Git.
+  **Atenção:** Nunca delete a pasta git caso não esteja na nuvem, ela é seu repositório, no caso de você deletá-la, perderá todo o histórico do seu projeto.
+- `git log --oneline` :Ele vai encurtar a hash, retirar o autor, a data e exibir a mensagem do commit ao lado.
+- `git log -n 5` : ver 5 ultimo commit
+- `git log --since=aaaa-mm-dd`: filtro de commit pela data especifico
+- `git log --author=nomedoautor(nao precisa ser completo)` :filtro pelo autor
+- `git log --grep="o que quer que esteja buscando, ex: bugfix"` : filtro de expressão global
+
 - `git log --oneline --graph --all`: mostra um gráfico com as modificações, commits são resumidos para uma linha. Adicionar `-10` para imprimir apenas 10 commits (ou outro número). Adicionar `--simplify-by-decoration` para simplificar o histórico
 
 - `git log --graph --all --oneline --pretty=format:'%C(yellow)%h%C(reset)%C(auto)%d%C(reset) %C(white)%s%C(reset) %C(magenta)[%an]%C(reset) %C(cyan)(%ar)%C(reset)' -5`: gráfico de commits personalizado. Adicionar como alias de `git tree` em: ~/.gitconfig
