@@ -46,11 +46,11 @@ Por fim, caso queira verificar as suas configurações, apenas rode o comando ab
 
 - `sudo apt-get install git` : instalar git
 
-- `git --version`: Ver version
+- `git --version`: ver version
 
 - `git config --global user.name "Seu nome completo entre aspas"`: configuração do nome de usuário
 
-- `git config --global user.email seuemailaqui@dominio.com`:configuração do email do usuário
+- `git config --global user.email seuemailaqui@dominio.com`: configuração do email do usuário
 
 - `git config --global core.editor "code -w"`: configuração de editor
 
