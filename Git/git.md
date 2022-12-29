@@ -96,7 +96,7 @@ Por fim, caso queira verificar as suas configurações, apenas rode o comando ab
 
 - `git show <commit code>` : mostra as modificações inseridas por um commit, usar `--color-words` para destacar palavras alteradas
 
-- `git log --oneline --graph --all`: mostra um gráfico com as modificações, commits são resumidos para uma linha. Adicionar `-10` para imprimir apenas 10 commits (ou outro número). Adicionar `--simplify-by-decoration` para simplificar o histórico
+- `git log --oneline --graph --all`:mostra um gráfico com as modificações, commits são resumidos para uma linha. Adicionar `-10` para imprimir apenas 10 commits (ou outro número). Adicionar `--simplify-by-decoration` para simplificar o histórico
 
 - `git log --graph --all --oneline --pretty=format:'%C(yellow)%h%C(reset)%C(auto)%d%C(reset) %C(white)%s%C(reset) %C(magenta)[%an]%C(reset) %C(cyan)(%ar)%C(reset)' -5`: gráfico de commits personalizado. Adicionar como alias de `git tree` em: ~/.gitconfig
 
