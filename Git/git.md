@@ -101,3 +101,9 @@ Por fim, caso queira verificar as suas configurações, apenas rode o comando ab
 - `git log --graph --all --oneline --pretty=format:'%C(yellow)%h%C(reset)%C(auto)%d%C(reset) %C(white)%s%C(reset) %C(magenta)[%an]%C(reset) %C(cyan)(%ar)%C(reset)' -5`: gráfico de commits personalizado. Adicionar como alias de `git tree` em: ~/.gitconfig
 
 [Referências adicionais](https://rogerdudler.github.io/git-guide/index.pt_BR.html)
+
+# Git help
+
+Para termos ajuda com o git, podemos usar o comando git help, onde você vai obeter informações sobre praticamente tudo no git, basta colocar git help + a área (exibida com o comando git help) na qual sua dúvida se encaixa e procurar sua resposta.
+
+Para sair do menu de ajuda, use o comando :q
