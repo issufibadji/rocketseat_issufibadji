@@ -112,6 +112,8 @@ Por fim, caso queira verificar as suas configurações, apenas rode o comando ab
 - `git log --graph --all --oneline --pretty=format:'%C(yellow)%h%C(reset)%C(auto)%d%C(reset) %C(white)%s%C(reset) %C(magenta)[%an]%C(reset) %C(cyan)(%ar)%C(reset)' -5`: gráfico de commits personalizado. Adicionar como alias de `git tree` em: ~/.gitconfig
 
 [Referências adicionais](https://rogerdudler.github.io/git-guide/index.pt_BR.html)
+ 
 [Referências adicionais] (https://www.treinaweb.com.br/blog/comandos-do-git-que-voce-precisa-conhecer-parte-1#:~:text=Para%20mudar%20para%20uma%20outra,passando%20o%20nome%20da%20branch.&text=Se%20voc%C3%AA%20adicionar%20%2Db%20%2C%20uma%20nova%20branch%20ser%C3%A1%20criada.)
+ 
 [Referências adicionais](https://www.treinaweb.com.br/blog/git-merge-e-git-rebase-quando-usa-los)
  [Referências adicionais](https://www.treinaweb.com.br/blog/comandos-do-git-que-voce-precisa-conhecer-parte-2-repositorios-remotos)
